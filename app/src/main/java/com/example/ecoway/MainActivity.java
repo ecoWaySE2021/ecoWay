@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] vehicle_List = {"Ποδήλατα", "Πατίνια", "Ηλεκτρικά Ποδήλατα"};
     //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει (δεν εχει θεμα το activity_main.xml αλλα η java)
-        //i wanna cry
+    //TODO: ΠΗΓΑΙΝΕΤΕ ΣΤΟ gradle.build ΚΑΙ ΚΟΙΤΑΞΤΕ ΤΟ minSdkVersion ΝΑ ΕΙΝΑΙ 16
         //vehicleList = (ListView)findViewById(R.id.vehiclesList);
         //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_main, vehicle_List);
         //vehicleList.setAdapter(arrayAdapter);
