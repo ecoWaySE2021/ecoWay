@@ -6,34 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="412dp"
-        android:layout_height="82dp"
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="734dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/topBar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:id="@+id/coordinatorLayout">
+        app:layout_constraintVertical_bias="0.666">
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar2"
-            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        <ListView
+            android:id="@+id/simpleListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:backgroundTint="#EBFFEB "
-            tools:layout_conversion_absoluteHeight="84dp"
-            tools:layout_conversion_absoluteWidth="412dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="647dp" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:layout_height="wrap_content"
+            android:divider="#000000"
+            android:dividerHeight="1dp"/>
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
         android:layout_width="408dp"
         android:layout_height="337dp"
+        android:background="#EBFFEB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +41,7 @@
             android:contentDescription="@android:string/unknownName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/sample_station" />
