@@ -60,9 +60,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="456dp"
-        android:layout_height="449dp"
+        android:layout_width="408dp"
+        android:layout_height="425dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topBar">
 
@@ -93,7 +94,7 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.042"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button4"
             app:layout_constraintVertical_bias="0.0" />
@@ -113,8 +114,8 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="453dp"
-            android:layout_height="42dp"
+            android:layout_width="415dp"
+            android:layout_height="41dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="#FFFFFF"
             android:text="Ποδήλατα"
@@ -125,13 +126,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.117" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="460dp"
-            android:layout_height="309dp"
+            android:layout_width="453dp"
+            android:layout_height="261dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
