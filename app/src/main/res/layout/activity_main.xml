@@ -10,14 +10,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
-        android:layout_width="413dp"
-        android:layout_height="324dp"
+        android:layout_width="460dp"
+        android:layout_height="327dp"
         android:background="#EBFFEB"
         android:backgroundTint="#EBFFEB"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -58,15 +60,16 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="411dp"
-        android:layout_height="401dp"
+        android:layout_width="456dp"
+        android:layout_height="449dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topBar">
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="408dp"
-            android:layout_height="39dp"
+            android:layout_width="458dp"
+            android:layout_height="47dp"
             android:backgroundTint="#FFFFFF"
             android:text="Πατίνια"
             android:textAlignment="viewStart"
@@ -81,8 +84,8 @@
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="407dp"
-            android:layout_height="44dp"
+            android:layout_width="455dp"
+            android:layout_height="49dp"
             android:backgroundTint="#FFFFFF"
             android:text="Ηλεκτρικά ποδήλατα"
             android:textAlignment="viewStart"
@@ -90,7 +93,7 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button4"
             app:layout_constraintVertical_bias="0.0" />
@@ -110,8 +113,8 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="412dp"
-            android:layout_height="41dp"
+            android:layout_width="453dp"
+            android:layout_height="42dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="#FFFFFF"
             android:text="Ποδήλατα"
@@ -124,6 +127,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="460dp"
+            android:layout_height="309dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ad" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -143,14 +158,15 @@
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
             style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-            android:layout_width="410dp"
-            android:layout_height="67dp"
+            android:layout_width="456dp"
+            android:layout_height="69dp"
             android:layout_gravity="bottom"
             android:layout_marginBottom="4dp"
             android:backgroundTint="#EBFFEB"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="0dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
             android:id="@+id/imageButton3"
