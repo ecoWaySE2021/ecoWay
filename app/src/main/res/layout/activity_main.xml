@@ -75,6 +75,7 @@
     <ScrollView
         android:layout_width="457dp"
         android:layout_height="441dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +163,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button3"
-                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ad" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -196,12 +197,12 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="54dp"
-            android:layout_height="46dp"
+            android:layout_width="58dp"
+            android:layout_height="53dp"
             android:backgroundTint="#EBFFEB"
             app:srcCompat="@drawable/screenshot_at_apr_20_18_50_17"
             tools:layout_editor_absoluteX="351dp"
-            tools:layout_editor_absoluteY="5dp" />
+            tools:layout_editor_absoluteY="-1dp" />
 
         <ImageButton
             android:id="@+id/imageButton5"
