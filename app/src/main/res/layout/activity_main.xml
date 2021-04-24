@@ -10,16 +10,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
-        android:layout_width="460dp"
-        android:layout_height="327dp"
+        android:layout_width="391dp"
+        android:layout_height="304dp"
         android:background="#EBFFEB"
         android:backgroundTint="#EBFFEB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004">
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -36,15 +36,15 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="183dp"
-            android:layout_height="37dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="129dp"
+            android:layout_height="29dp"
             android:text="Τριών Ναυάρχων"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.552"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -73,8 +73,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
-        android:layout_width="457dp"
-        android:layout_height="441dp"
+        android:layout_width="393dp"
+        android:layout_height="391dp"
         android:layout_marginTop="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,20 +84,20 @@
         app:layout_constraintVertical_bias="0.041">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="408dp"
+            android:layout_width="391dp"
             android:layout_height="425dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="5dp">
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="458dp"
-                android:layout_height="47dp"
+                android:layout_width="393dp"
+                android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
                 android:text="Πατίνια"
                 android:textAlignment="viewStart"
@@ -112,8 +112,8 @@
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="455dp"
-                android:layout_height="49dp"
+                android:layout_width="391dp"
+                android:layout_height="45dp"
                 android:backgroundTint="#FFFFFF"
                 android:text="Ηλεκτρικά ποδήλατα"
                 android:textAlignment="viewStart"
@@ -141,8 +141,8 @@
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="415dp"
-                android:layout_height="41dp"
+                android:layout_width="393dp"
+                android:layout_height="43dp"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="#FFFFFF"
                 android:text="Ποδήλατα"
@@ -158,14 +158,14 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="501dp"
-                android:layout_height="256dp"
+                android:layout_width="389dp"
+                android:layout_height="207dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.107"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button3"
-                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ad" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -173,8 +173,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="409dp"
-        android:layout_height="53dp"
+        android:layout_width="393dp"
+        android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#EBFFEB"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -187,13 +187,14 @@
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
             style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-            android:layout_width="421dp"
-            android:layout_height="51dp"
+            android:layout_width="394dp"
+            android:layout_height="54dp"
             android:layout_gravity="bottom"
             android:backgroundTint="#EBFFEB"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
