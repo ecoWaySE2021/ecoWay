@@ -13,7 +13,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //TODO: Μεχρι να συνδέσουμε τα activities, καντε uncomment τη γραμμή 17 για το σταθμό και την 18 για το προφιλ
+        // setContentView(R.layout.activity_main);
+        setContentView(R.layout.profile);
 
         String[] vehicle_List = {"Ποδήλατα", "Πατίνια", "Ηλεκτρικά Ποδήλατα"};
     //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει (δεν εχει θεμα το activity_main.xml αλλα η java)
