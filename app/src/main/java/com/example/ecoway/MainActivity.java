@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         // setContentView(R.layout.profile);
 
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
-        arrayAdapter = new ArrayAdapter<String>(this,
-                R.layout.activity_main, S1.vehicle_List);
+        //arrayAdapter = new ArrayAdapter<String>(this,
+          //      R.layout.activity_main, S1.vehicle_List);
 
         //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει
         // (δεν εχει θεμα το activity_main.xml αλλα η java)
