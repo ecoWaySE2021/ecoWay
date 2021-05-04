@@ -10,5 +10,9 @@ public class Station{
         /*φτιαχνω ενσν πινακα ακεραιων για την ποσοτητα οχηματων στο σταθμο. Η θεση του αριθμού
             αντιστοιχει στο οχημα βασει του vehicle list -Εύα*/
         //TODO: Να μπει το vehicle list στο domain του σταθμού
+        int[] vehicle_amount;
+        String[] vehicle_List;
+        String location;
+        int id;
 
 }
