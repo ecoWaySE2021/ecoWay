@@ -10,6 +10,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ListView vehicleList;
+    Station S1 = new Station(1, 2, 3, "Τριών Ναυάρχων", 1);
+    //vehicleList = (ListView)findViewById(R.id.vehiclesList);
+    //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_main, vehicle_List);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
         // setContentView(R.layout.profile);
 
     //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει (δεν εχει θεμα το activity_main.xml αλλα η java)
-        //vehicleList = (ListView)findViewById(R.id.vehiclesList);
-        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_main, vehicle_List);
         //vehicleList.setAdapter(arrayAdapter);
     }
 }
