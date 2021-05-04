@@ -13,17 +13,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //TODO: Μεχρι να συνδέσουμε τα activities, καντε uncomment τη γραμμή 17 για το σταθμό και την 18 για το προφιλ
-        // setContentView(R.layout.activity_main);
-        setContentView(R.layout.profile);
+        // Μεχρι να συνδέσουμε τα activities, καντε uncomment τη γραμμή 17 για το σταθμό και την 18 για το προφιλ
+        setContentView(R.layout.activity_main);
+        // setContentView(R.layout.profile);
 
-        String[] vehicle_List = {"Ποδήλατα", "Πατίνια", "Ηλεκτρικά Ποδήλατα"};
-    //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει (δεν εχει θεμα το activity_main.xml αλλα η java)
-    //TODO: ΠΗΓΑΙΝΕΤΕ ΣΤΟ gradle.build ΚΑΙ ΚΟΙΤΑΞΤΕ ΤΟ minSdkVersion ΝΑ ΕΙΝΑΙ 16
+        //TODO: Να μπει το vehicle list στο domain του σταθμού
+        //vehicle list sto station.java
+// TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει (δεν εχει θεμα το activity_main.xml αλλα η java)
         //vehicleList = (ListView)findViewById(R.id.vehiclesList);
-        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_main, vehicle_List);
+        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_main,
+        // this.Station.vehicle_list); //sto telos thelw na pairnw ton pinaka apo to stations
         //vehicleList.setAdapter(arrayAdapter);
     }
-
-
 }
+
