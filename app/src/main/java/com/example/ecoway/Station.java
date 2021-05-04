@@ -8,4 +8,8 @@ public class Station {
 
         String location = "placeholder";
         int id = 123;
+
+        public void VehicleList(){
+
+        }
 }

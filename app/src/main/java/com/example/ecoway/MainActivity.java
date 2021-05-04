@@ -18,11 +18,10 @@ public class MainActivity extends AppCompatActivity {
         // setContentView(R.layout.profile);
 
         //TODO: Να μπει το vehicle list στο domain του σταθμού
-        //vehicle list sto station.java
-// TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει (δεν εχει θεμα το activity_main.xml αλλα η java)
+        String[] vehicle_List = {"Ποδήλατα", "Πατίνια", "Ηλεκτρικά Ποδήλατα"};
+    //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει (δεν εχει θεμα το activity_main.xml αλλα η java)
         //vehicleList = (ListView)findViewById(R.id.vehiclesList);
-        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_main,
-        // this.Station.vehicle_list); //sto telos thelw na pairnw ton pinaka apo to stations
+        //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_main, vehicle_List);
         //vehicleList.setAdapter(arrayAdapter);
     }
 }
