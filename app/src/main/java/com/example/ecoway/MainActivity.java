@@ -3,15 +3,14 @@ package com.example.ecoway;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+//import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ListView vehicleList;
-    ArrayAdapter<String> arrayAdapter;
-    Station S1 = new Station(1, 2, 3, "Τριών Ναυάρχων", 1);
+    //ArrayAdapter<String> arrayAdapter;
+    //Station S1 = new Station(1, 2, 3, "Τριών Ναυάρχων", 1);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει
         // (δεν εχει θεμα το activity_main.xml αλλα η java)
-        vehicleList.setAdapter(arrayAdapter);
+        //vehicleList.setAdapter(arrayAdapter);
     }
 }
 
