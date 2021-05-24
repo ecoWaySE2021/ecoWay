@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 //import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class StationActivity extends AppCompatActivity {
     ListView vehicleList;
     //ArrayAdapter<String> arrayAdapter;
     //Station S1 = new Station(1, 2, 3, "Τριών Ναυάρχων", 1);
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τη γραμμή 18 για το σταθμό
             // και την 19 για το προφιλ
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_station);
         // setContentView(R.layout.profile);
 
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
