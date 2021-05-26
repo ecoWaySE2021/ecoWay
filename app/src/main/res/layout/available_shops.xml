@@ -57,10 +57,12 @@
         android:backgroundTint="#EBFFEB"
         android:layoutMode="opticalBounds"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/buttomChoices"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoLayout">
+        app:layout_constraintTop_toBottomOf="@+id/logoLayout"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView4"
@@ -83,8 +85,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
-        android:layout_width="415dp"
-        android:layout_height="623dp"
+        android:layout_width="413dp"
+        android:layout_height="644dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -209,22 +211,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
                     app:layout_constraintVertical_bias="0.021">
 
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="107dp"
-                        android:layout_height="31dp"
-                        android:text="     Κορίνθου"
-                        android:textColor="#373232"
-                        android:textSize="15sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.948"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
-                        app:layout_constraintTop_toBottomOf="@+id/mapImage4"
-                        app:layout_constraintVertical_bias="1.0" />
-
                     <ImageButton
-                        android:id="@+id/mapImage4"
+                        android:id="@+id/mapImage3"
                         android:layout_width="106dp"
                         android:layout_height="48dp"
                         android:background="@color/white"
@@ -233,27 +221,39 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.857"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.025"
                         app:srcCompat="@android:drawable/ic_dialog_map" />
 
                     <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="39dp"
-                        android:layout_height="32dp"
-                        android:text="€ €"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
+                        android:id="@+id/textView29"
+                        android:layout_width="85dp"
+                        android:layout_height="22dp"
+                        android:text="Κορίνθου"
+                        android:textColor="#373232"
+                        android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.143"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
-                        app:layout_constraintTop_toBottomOf="@+id/textView12"
-                        app:layout_constraintVertical_bias="0.625" />
+                        app:layout_constraintHorizontal_bias="0.483"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toBottomOf="@+id/mapImage3"
+                        app:layout_constraintVertical_bias="0.157" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="120dp"
+                        android:layout_height="95dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/central_perk" />
 
                     <TextView
-                        android:id="@+id/textView12"
+                        android:id="@+id/textView27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Central Perk"
@@ -261,34 +261,34 @@
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.04"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintHorizontal_bias="0.081"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.25" />
+                        app:layout_constraintVertical_bias="0.242" />
 
-                    <ImageView
-                        android:id="@+id/imageView9"
-                        android:layout_width="118dp"
-                        android:layout_height="92dp"
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="39dp"
+                        android:layout_height="32dp"
+                        android:text=" € €"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/central_perk" />
+                        app:layout_constraintHorizontal_bias="0.152"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView27"
+                        app:layout_constraintVertical_bias="0.111" />
 
                     <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="66dp"
-                        android:layout_height="71dp"
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.51"
                         app:srcCompat="@drawable/distcp" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -302,51 +302,39 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
                     app:layout_constraintVertical_bias="0.038">
 
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="105dp"
-                        android:layout_height="31dp"
-                        android:text="       Ερμού"
-                        android:textColor="#373232"
-                        android:textSize="15sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.948"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
-                        app:layout_constraintTop_toBottomOf="@+id/mapImage4"
-                        app:layout_constraintVertical_bias="1.0" />
-
                     <ImageButton
-                        android:id="@+id/mapImage4"
+                        android:id="@+id/mapImage5"
                         android:layout_width="106dp"
                         android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
                         android:background="@color/white"
                         android:backgroundTint="@color/white"
                         android:tint="#636363"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.857"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView11"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@android:drawable/ic_dialog_map" />
 
                     <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="62dp"
-                        android:layout_height="34dp"
-                        android:text="€ € €"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
+                        android:id="@+id/textView33"
+                        android:layout_width="80dp"
+                        android:layout_height="19dp"
+                        android:layout_marginTop="18dp"
+                        android:text="  Καρόλου"
+                        android:textColor="#373232"
+                        android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.127"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
-                        app:layout_constraintTop_toBottomOf="@+id/textView12"
-                        app:layout_constraintVertical_bias="0.642" />
+                        app:layout_constraintHorizontal_bias="0.448"
+                        app:layout_constraintStart_toEndOf="@+id/imageView11"
+                        app:layout_constraintTop_toBottomOf="@+id/mapImage5"
+                        app:layout_constraintVertical_bias="0.0" />
 
                     <TextView
-                        android:id="@+id/textView12"
+                        android:id="@+id/textView30"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Crispy Crab"
@@ -354,32 +342,46 @@
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.04"
+                        app:layout_constraintHorizontal_bias="0.067"
                         app:layout_constraintStart_toEndOf="@+id/imageView9"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.25" />
 
                     <ImageView
                         android:id="@+id/imageView9"
-                        android:layout_width="118dp"
-                        android:layout_height="92dp"
+                        android:layout_width="117dp"
+                        android:layout_height="89dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/traganos" />
 
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="66dp"
-                        android:layout_height="71dp"
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="72dp"
+                        android:layout_height="35dp"
+                        android:text=" € € €"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
+                        app:layout_constraintHorizontal_bias="0.061"
+                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintTop_toBottomOf="@+id/textView30"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="70dp"
+                        android:layout_height="51dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView9"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.51"
+                        app:layout_constraintVertical_bias="0.513"
                         app:srcCompat="@drawable/dc" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -393,86 +395,89 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
-                    app:layout_constraintVertical_bias="0.038">
+                    app:layout_constraintVertical_bias="0.0">
 
                     <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="110dp"
-                        android:layout_height="26dp"
-                        android:text="     Καρόλου"
+                        android:id="@+id/textView36"
+                        android:layout_width="87dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="24dp"
+                        android:text="      Ερμού"
                         android:textColor="#373232"
                         android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
-                        app:layout_constraintTop_toBottomOf="@+id/mapImage4"
+                        app:layout_constraintHorizontal_bias="0.157"
+                        app:layout_constraintStart_toEndOf="@+id/imageView13"
+                        app:layout_constraintTop_toBottomOf="@+id/mapImage6"
                         app:layout_constraintVertical_bias="1.0" />
 
                     <ImageButton
-                        android:id="@+id/mapImage4"
-                        android:layout_width="106dp"
-                        android:layout_height="48dp"
+                        android:id="@+id/mapImage6"
+                        android:layout_width="94dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="8dp"
                         android:background="@color/white"
                         android:backgroundTint="@color/white"
                         android:tint="#636363"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.857"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView13"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@android:drawable/ic_dialog_map" />
 
                     <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="62dp"
-                        android:layout_height="34dp"
-                        android:text="€ € €"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.127"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
-                        app:layout_constraintTop_toBottomOf="@+id/textView12"
-                        app:layout_constraintVertical_bias="0.642" />
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Romino Pizza"
+                        android:id="@+id/textView35"
+                        android:layout_width="136dp"
+                        android:layout_height="24dp"
+                        android:text="Rimmono Pizza"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.037"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.25" />
 
-                    <ImageView
-                        android:id="@+id/imageView9"
-                        android:layout_width="118dp"
-                        android:layout_height="92dp"
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="72dp"
+                        android:layout_height="35dp"
+                        android:text=" € € €"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="0.061"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
+                        app:layout_constraintTop_toBottomOf="@+id/textView35"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="115dp"
+                        android:layout_height="89dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.006"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/pizza_hot_design" />
 
                     <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="58dp"
-                        android:layout_height="61dp"
+                        android:id="@+id/imageView13"
+                        android:layout_width="56dp"
+                        android:layout_height="57dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintHorizontal_bias="0.561"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.51"
+                        app:layout_constraintVertical_bias="0.483"
                         app:srcCompat="@drawable/_0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -483,72 +488,15 @@
                     android:layout_height="88dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
-                    app:layout_constraintVertical_bias="0.086">
-
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="107dp"
-                        android:layout_height="31dp"
-                        android:text="  Καραισκάκη"
-                        android:textColor="#373232"
-                        android:textSize="15sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.948"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
-                        app:layout_constraintTop_toBottomOf="@+id/mapImage4"
-                        app:layout_constraintVertical_bias="1.0" />
-
-                    <ImageButton
-                        android:id="@+id/mapImage4"
-                        android:layout_width="106dp"
-                        android:layout_height="48dp"
-                        android:background="@color/white"
-                        android:backgroundTint="@color/white"
-                        android:tint="#636363"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.857"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.025"
-                        app:srcCompat="@android:drawable/ic_dialog_map" />
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="62dp"
-                        android:layout_height="34dp"
-                        android:text="€ € €"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.127"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
-                        app:layout_constraintTop_toBottomOf="@+id/textView12"
-                        app:layout_constraintVertical_bias="0.642" />
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Burger App"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.04"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.25" />
+                    app:layout_constraintVertical_bias="0.083">
 
                     <ImageView
-                        android:id="@+id/imageView9"
-                        android:layout_width="114dp"
-                        android:layout_height="88dp"
+                        android:id="@+id/imageView14"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -556,24 +504,82 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/burger" />
 
-                    <ImageView
-
-                        android:id="@+id/imageView10"
-                        android:layout_width="66dp"
-                        android:layout_height="71dp"
+                    <ImageButton
+                        android:id="@+id/mapImage7"
+                        android:layout_width="94dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:tint="#636363"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.51"
+                        app:layout_constraintVertical_bias="0.069"
+                        app:srcCompat="@android:drawable/ic_dialog_map" />
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="192dp"
+                        android:text="Burger App"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.562"
+                        app:layout_constraintStart_toEndOf="@+id/imageView14"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.25" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="72dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="8dp"
+                        android:text=" € € €"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.04"
+                        app:layout_constraintStart_toEndOf="@+id/imageView14"
+                        app:layout_constraintTop_toBottomOf="@+id/textView39"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="50dp"
+                        android:layout_height="51dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.562"
+                        app:layout_constraintStart_toEndOf="@+id/imageView14"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.513"
                         app:srcCompat="@drawable/_0" />
 
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="97dp"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="5dp"
+                        android:text="        Καραϊσκάκη"
+                        android:textColor="#373232"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15"
+                        app:layout_constraintTop_toBottomOf="@+id/mapImage7"
+                        app:layout_constraintVertical_bias="1.0" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="415dp"
-                    android:layout_height="88dp"
+                    android:layout_width="411dp"
+                    android:layout_height="91dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -582,7 +588,7 @@
                     app:layout_constraintVertical_bias="0.237">
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/textView50"
                         android:layout_width="128dp"
                         android:layout_height="35dp"
                         android:text="  Βορείου Ηπείρου"
@@ -620,7 +626,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.127"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintStart_toEndOf="@+id/centralPerk"
                         app:layout_constraintTop_toBottomOf="@+id/textView12"
                         app:layout_constraintVertical_bias="0.642" />
 
@@ -634,12 +640,12 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.02"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintStart_toEndOf="@+id/centralPerk"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.25" />
 
                     <ImageView
-                        android:id="@+id/imageView9"
+                        android:id="@+id/centralPerk"
                         android:layout_width="115dp"
                         android:layout_height="94dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -656,7 +662,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.457"
-                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintStart_toEndOf="@+id/centralPerk"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.533"
                         app:srcCompat="@drawable/_7" />
@@ -667,79 +673,35 @@
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/buttomChoices"
-        android:layout_width="409dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/bottomBar"
+        android:layout_width="416dp"
+        android:layout_height="71dp"
         android:background="#EBFFEB"
-        android:backgroundTint="#EBFFEB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/topBar"
+        app:layout_constraintTop_toBottomOf="@+id/middleBar"
         app:layout_constraintVertical_bias="1.0">
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
-            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-            android:layout_width="416dp"
-            android:layout_height="43dp"
-            android:layout_gravity="bottom"
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="51dp"
+            android:layout_height="48dp"
             android:backgroundTint="#EBFFEB"
-            app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/profileImage"
-            android:layout_width="58dp"
-            android:layout_height="53dp"
-            android:backgroundTint="#EBFFEB"
-            app:layout_constraintBottom_toBottomOf="@+id/favouriteImage"
-            app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/mapImage"
-            app:layout_constraintTop_toTopOf="@+id/favouriteImage"
-            app:layout_constraintVertical_bias="0.947"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toEndOf="@+id/favoritesButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/screenshot_at_apr_20_18_50_17" />
 
         <ImageButton
-            android:id="@+id/favouriteImage"
-            android:layout_width="76dp"
-            android:layout_height="34dp"
-            android:background="@color/white"
-            android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
-            app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-            app:layout_constraintEnd_toEndOf="@+id/profileImage"
-            app:layout_constraintHorizontal_bias="0.777"
-            app:layout_constraintStart_toStartOf="@+id/homeImage"
-            app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-            app:layout_constraintVertical_bias="0.882"
-            app:srcCompat="@android:drawable/btn_star" />
-
-        <ImageButton
-            android:id="@+id/searchImage"
-            android:layout_width="51dp"
-            android:layout_height="49dp"
-            android:background="@color/white"
-            android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
-            app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-            app:layout_constraintEnd_toStartOf="@+id/mapImage"
-            app:layout_constraintHorizontal_bias="0.756"
-            app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-            app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-            app:layout_constraintVertical_bias="0.6"
-            app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
-
-        <ImageButton
-            android:id="@+id/mapImage"
-            android:layout_width="64dp"
-            android:layout_height="43dp"
+            android:id="@+id/mapButton"
+            android:layout_width="62dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="172dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
             android:tint="#636363"
@@ -752,20 +714,63 @@
             app:srcCompat="@android:drawable/ic_dialog_map" />
 
         <ImageButton
-            android:id="@+id/homeImage"
+            android:id="@+id/favoritesButton"
+            android:layout_width="69dp"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:backgroundTint="#EBFFEB"
+            android:tint="#636363"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.751"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="51dp"
+            android:layout_height="49dp"
+            android:background="@color/white"
+            android:backgroundTint="#EBFFEB"
+            android:tint="#636363"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/profileButton"
+            app:layout_constraintHorizontal_bias="0.291"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
             android:layout_width="50dp"
             android:layout_height="47dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
-            app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-            app:layout_constraintEnd_toStartOf="@+id/mapImage"
-            app:layout_constraintHorizontal_bias="0.13"
-            app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-            app:layout_constraintTop_toTopOf="@+id/mapImage"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/spitaki" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#070707"
+        android:foregroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/CategoryName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
