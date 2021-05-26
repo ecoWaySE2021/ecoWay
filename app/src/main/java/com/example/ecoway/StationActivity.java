@@ -16,9 +16,9 @@ public class StationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τη γραμμή 18 για το σταθμό
             // και την 19 για το προφιλ
-        setContentView(R.layout.activity_station);
+       // setContentView(R.layout.activity_station);
         // setContentView(R.layout.profile);
-
+        setContentView(R.layout.rewards);
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
         //arrayAdapter = new ArrayAdapter<String>(this,
             // R.layout.activity_main, S1.vehicle_List);
