@@ -19,6 +19,7 @@ public class StationActivity extends AppCompatActivity {
        // setContentView(R.layout.activity_station);
         // setContentView(R.layout.profile);
         setContentView(R.layout.rewards);
+
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
         //arrayAdapter = new ArrayAdapter<String>(this,
             // R.layout.activity_main, S1.vehicle_List);
