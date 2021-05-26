@@ -14,11 +14,10 @@ public class StationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Μεχρι να συνδέσουμε τα activities, καντε uncomment τη γραμμή 18 για το σταθμό
-            // και την 19 για το προφιλ
-       // setContentView(R.layout.activity_station);
-        // setContentView(R.layout.profile);
-        setContentView(R.layout.rewards);
+        // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
+        // setContentView(R.layout.activity_station);
+        setContentView(R.layout.profile);
+        // setContentView(R.layout.rewards);
 
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
         //arrayAdapter = new ArrayAdapter<String>(this,
