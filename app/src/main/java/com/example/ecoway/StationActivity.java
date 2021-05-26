@@ -14,11 +14,10 @@ public class StationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Μεχρι να συνδέσουμε τα activities, καντε uncomment τη γραμμή 18 για το σταθμό
-            // και την 19 για το προφιλ
-       // setContentView(R.layout.activity_station);
-        // setContentView(R.layout.profile);
-        setContentView(R.layout.rewards);
+        // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
+        // setContentView(R.layout.activity_station);
+        setContentView(R.layout.profile);
+        // setContentView(R.layout.rewards);
 
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
         //arrayAdapter = new ArrayAdapter<String>(this,
@@ -26,6 +25,8 @@ public class StationActivity extends AppCompatActivity {
 
         //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει
         // (δεν εχει θεμα το activity_main.xml αλλα η java )
+        //TODO: διορθωση τ layout στο top τ rewards γτ δεν το διαβαζει ετσι ωστε να μπει χρωμα
+        //TODO: αλλαγη χρωματος/στυλ στα buttons στο payment screen
         //vehicleList.setAdapter(arrayAdapter);
     }
 }
