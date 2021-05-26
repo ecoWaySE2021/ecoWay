@@ -25,6 +25,7 @@ public class StationActivity extends AppCompatActivity {
 
         //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει
         // (δεν εχει θεμα το activity_main.xml αλλα η java )
+        //TODO: διορθωση τ layout στο top τ rewards γτ δεν το διαβαζει ετσι ωστε να μπει χρωμα
         //vehicleList.setAdapter(arrayAdapter);
     }
 }
