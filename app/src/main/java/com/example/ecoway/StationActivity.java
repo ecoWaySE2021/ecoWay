@@ -17,7 +17,7 @@ public class StationActivity extends AppCompatActivity {
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);
         //setContentView(R.layout.profile);
-         //setContentView(R.layout.rewards);
+        setContentView(R.layout.rewards);
         setContentView(R.layout.available_shops);
 
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
