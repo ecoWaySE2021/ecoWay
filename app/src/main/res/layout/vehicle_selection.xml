@@ -6,22 +6,15 @@
              android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="413dp"
         android:layout_height="108dp"
         android:background="#EBFFEB"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="163dp"
-            android:layout_height="37dp"
-            app:srcCompat="@drawable/ecoway" />
+        app:layout_constraintVertical_bias="0.004">
 
         <ImageView
             android:id="@+id/imageView17"
@@ -30,4 +23,16 @@
             app:srcCompat="@drawable/dropdown1" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="163dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ecoway" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
