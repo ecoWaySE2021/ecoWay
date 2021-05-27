@@ -189,6 +189,18 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:layout_constraintVertical_bias="0.78" />
 
+        <LinearLayout
+            android:layout_width="416dp"
+            android:layout_height="76dp"
+            android:background="#EBFFEB"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"></LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -205,47 +217,6 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton10"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
         app:layout_constraintVertical_bias="0.666" />
-
-    <layout
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/divider"
-        app:layout_constraintStart_toStartOf="@+id/divider"
-        app:layout_constraintTop_toTopOf="@+id/scrollView2"
-        tools:visibility="visible">
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="417dp"
-            android:layout_height="69dp"
-            android:accessibilityLiveRegion="assertive"
-            android:addStatesFromChildren="false"
-            android:animateLayoutChanges="true"
-            android:background="#EBFFEB"
-            android:backgroundTint="#EBFFEB"
-            android:baselineAligned="true"
-            android:fadingEdge="horizontal|vertical|none"
-            android:focusable="auto"
-            android:focusableInTouchMode="true"
-            android:foregroundTintMode="add"
-            android:gravity="bottom"
-            android:importantForAccessibility="noHideDescendants"
-            android:layerType="software"
-            android:layoutDirection="locale"
-            android:layoutMode="clipBounds"
-            android:orientation="vertical"
-            android:scrollbarStyle="outsideOverlay"
-
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="@+id/divider"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView3"
-            app:layout_constraintVertical_bias="1.0"
-            app:layout_optimizationLevel="none|grouping"
-            tools:visibility="visible"></LinearLayout>
-    </layout>
 
     <View
         android:id="@+id/divider2"
