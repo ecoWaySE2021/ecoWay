@@ -2,7 +2,7 @@ package com.example.ecoway;
 
 public class Routes {
 
-    double latitde, longitude; //Συντεταγμένες
+    float latitde, longitude; //Συντεταγμένες
     String address; //Ακριβείς διεύθυνση
     static int id=0; //id κάθε διαδρομής
     String type; //τυπος διαδρομης
@@ -10,14 +10,14 @@ public class Routes {
     int difficulty;
     int[] dur = new int[3]; //0->μερες, 1->ωρες, 2->λεπτα
     int age_limit;
-    double how_far;
+    float how_far;
     double route_length;
     double pop;
 
     public Routes()
     {
-        this.latitde=0.0;
-        this.longitude=0.0;
+        this.latitde=0.0f;
+        this.longitude=0.0f;
         this.address=" ";
         this.id++;
         this.type = " ";
@@ -27,12 +27,12 @@ public class Routes {
             this.dur[i] = 0;
         }
         this.age_limit = 100;
-        this.how_far = 0.0;
+        this.how_far = 0.0f;
         this.route_length = 0.0;
         this.pop = 0.0;
     }
 
-    public Routes(double latitde, double longitude, String address,String type,String equip[],
+    public Routes(float latitde, float longitude, String address,String type,String equip[],
                   int difficulty, int dur[], int age_limit, double route_length, double pop)
     {
         this.latitde=latitde;
