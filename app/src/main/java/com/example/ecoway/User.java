@@ -6,6 +6,7 @@ public class User {
     String num;
     String[] payment_info = new String[100];
     float lng,lat;
+    boolean loginFlag;
 
     protected float getUserLongitude(User usr){
         return lng;
@@ -23,6 +24,7 @@ public class User {
         for (int i=0; i<100; i++){
             this.payment_info[i] = " ";
         }
+        this.loginFlag = false;
         this.lng = 0.0f;
         this.lat =0.0f;
 
@@ -32,6 +34,7 @@ public class User {
 
     public User(String name, String num, String[] payment_info){
         this.id++;
+        this.loginFlag = false;
         this.name = name;
         this.num = num;
         for(int i=0; i<payment_info.length; i++){
