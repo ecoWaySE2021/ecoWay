@@ -28,6 +28,7 @@ public class StationActivity extends AppCompatActivity {
         //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει
         // (δεν εχει θεμα το activity_main.xml αλλα η java )
         //TODO: αλλαγη χρωματος/στυλ στα buttons στο payment screen
+        //TODO: γιατι θελουμε να τα αλλαξουν, τι εχουν; -Χρηστος
         //vehicleList.setAdapter(arrayAdapter);
     }
 }
