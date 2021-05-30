@@ -7,14 +7,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomBar"
-        android:layout_width="416dp"
-        android:layout_height="71dp"
+        android:layout_width="406dp"
+        android:layout_height="41dp"
         android:background="#EBFFEB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/middleBar"
+        app:layout_constraintTop_toBottomOf="@+id/logoLayout"
         app:layout_constraintVertical_bias="1.0">
 
         <ImageButton
@@ -37,14 +37,14 @@
             android:layout_marginStart="172dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
             app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
             app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
             app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@android:drawable/ic_dialog_map" />
+            app:srcCompat="@android:drawable/ic_dialog_map"
+            app:tint="#636363" />
 
         <ImageButton
             android:id="@+id/favoritesButton"
@@ -52,14 +52,14 @@
             android:layout_height="48dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.751"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@android:drawable/btn_star" />
+            app:srcCompat="@android:drawable/btn_star"
+            app:tint="#636363" />
 
         <ImageButton
             android:id="@+id/searchButton"
@@ -67,14 +67,14 @@
             android:layout_height="49dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/profileButton"
             app:layout_constraintHorizontal_bias="0.291"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+            app:srcCompat="?android:attr/actionModeWebSearchDrawable"
+            app:tint="#636363" />
 
         <ImageButton
             android:id="@+id/homeButton"
@@ -204,33 +204,39 @@
                 android:textColor="#151515"
                 android:textSize="34sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView89"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.111"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageView23"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textView88"
                 android:layout_width="98dp"
                 android:layout_height="27dp"
-                android:layout_marginStart="44dp"
                 android:layout_marginTop="28dp"
                 android:text="Μαιζώνος"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView23"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textView89"
                 android:layout_width="24dp"
                 android:layout_height="27dp"
-                android:layout_marginBottom="28dp"
                 android:text="$"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.542"
-                app:layout_constraintStart_toEndOf="@+id/textView88" />
+                app:layout_constraintHorizontal_bias="0.639"
+                app:layout_constraintStart_toEndOf="@+id/textView88"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.912" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 
@@ -249,30 +255,36 @@
                 android:id="@+id/textView90"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
                 android:text="Κοντινότερη στάση: Πλατεία Γεωργίου "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.102"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25" />
 
             <TextView
                 android:id="@+id/textView91"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:layout_marginBottom="24dp"
                 android:text="Αναμενόμενη χρέωση: 2€"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toEndOf="@+id/imageView24"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.777" />
 
             <ImageView
                 android:id="@+id/imageView24"
                 android:layout_width="97dp"
                 android:layout_height="65dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.948"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/distjava" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
