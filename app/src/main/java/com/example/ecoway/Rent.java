@@ -19,11 +19,12 @@ public class Rent {
     }
 
     public Rent(User usr, Vehicle vhc){
-        super();
         this.id++;
         this.usr_id = usr.id;
         this.vehicle_id = vhc.id;
         this.formatter.format(this.date);
+        this.dur=0.0f;
+
     }
 
 
