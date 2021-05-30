@@ -6,7 +6,7 @@ public class Payment{
     static int ID;
     int ID_rent;
     double total;
-    payment tropos;
+    payment pway;
     State state;
 
     public Payment(){
@@ -17,7 +17,7 @@ public class Payment{
         this.ID=ID;
         this.ID_rent=ID_rent;
         this.total=total;
-        this.tropos=tropos;
+        this.pway=tropos;
         this.state=state;
     }
 
