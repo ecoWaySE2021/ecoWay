@@ -15,7 +15,8 @@ public class Payment{
         total=0;
         pway=payment.NULL;
         state=State.on_hold;
-                    }
+    }
+
     public Payment(int ID, int ID_rent, double total, payment pway, State state)
     {
         this.ID=ID;
