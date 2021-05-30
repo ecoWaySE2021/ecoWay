@@ -26,5 +26,15 @@
       <option name="name" value="MavenRepo" />
       <option name="url" value="https://repo.maven.apache.org/maven2/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="fe3e480f-c73c-45b6-9b7e-293e061e1856" />
+      <option name="name" value="fe3e480f-c73c-45b6-9b7e-293e061e1856" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="d434a903-dcb6-4b22-90a1-3be3d1ff611e" />
+      <option name="name" value="d434a903-dcb6-4b22-90a1-3be3d1ff611e" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/com/android/volley/" />
+    </remote-repository>
   </component>
 </project>

@@ -16,10 +16,16 @@ public class StationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);
-        //setContentView(R.layout.profile);
-         setContentView(R.layout.rewards);
+        setContentView(R.layout.profile);
+         //setContentView(R.layout.rewards);
         //setContentView(R.layout.available_shops);
         //setContentView(R.layout.payment_screen);
+        //setContentView(R.layout.suggested_routes);
+        //TODO suggested routes
+        //setContentView(R.layout.vehicle_selection);
+        //setContentView(R.layout.shop_info);
+
+
 
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
         //arrayAdapter = new ArrayAdapter<String>(this,
