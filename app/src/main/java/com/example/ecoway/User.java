@@ -9,6 +9,7 @@ public class User {
     boolean loginFlag;
     float score; //ποσοστο οικολογικης μετακινησης
     Routes[] routeList = new Routes[100];
+    int points;
 
     protected float getUserLongitude(User usr){
         return lng;
@@ -33,6 +34,7 @@ public class User {
         this.lng = getUserLongitude(this);
         this.lat = getUserLatitude(this);
         this.score = 0.0f;
+        this.points = 0;
     }
 
     public User(String name, String num, String[] payment_info){
@@ -53,4 +55,11 @@ public class User {
         return score;
     }
 
+    public void addPoints(User user, int points){
+        user.points = user.points + points;
+    }
+
+    public void removePoints(User user, int points){
+        user.points = user.points - points;
+    }
 }

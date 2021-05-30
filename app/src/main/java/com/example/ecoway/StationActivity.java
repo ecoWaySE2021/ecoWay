@@ -34,6 +34,7 @@ public class StationActivity extends AppCompatActivity {
         // (δεν εχει θεμα το activity_main.xml αλλα η java )
         //TODO: αλλαγη χρωματος/στυλ στα buttons στο payment screen
         //TODO: γιατι θελουμε να τα αλλαξουν, τι εχουν; -Χρηστος
+        //TODO: ΕΙΝΑΙ ΑΣΧΗΜΑ ΚΑΙ ΔΕ ΣΥΜΒΑΔΙΖΟΥΝ ΜΕ ΤΗΝ ΑΙΣΘΗΤΙΚΗ ΜΟΥ - Ευα
         //vehicleList.setAdapter(arrayAdapter);
     }
 }
