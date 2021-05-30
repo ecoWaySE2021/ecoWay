@@ -1,4 +1,5 @@
 package com.example.ecoway;
+import java.util.ArrayList;
 
 public class User {
     static int id=0;
@@ -10,6 +11,7 @@ public class User {
     float score; //ποσοστο οικολογικης μετακινησης
     Routes[] routeList = new Routes[100];
     int points;
+    ArrayList <Invitations> invitationsList = new ArrayList<Invitations>();
 
     protected float getUserLongitude(User usr){
         return lng;
