@@ -7,6 +7,8 @@ public class User {
     String[] payment_info = new String[100];
     float lng,lat;
     boolean loginFlag;
+    float score; //ποσοστο οικολογικης μετακινησης
+    Routes[] routeList = new Routes[100];
 
     protected float getUserLongitude(User usr){
         return lng;
@@ -30,6 +32,7 @@ public class User {
 
         this.lng = getUserLongitude(this);
         this.lat = getUserLatitude(this);
+        this.score = 0.0f;
     }
 
     public User(String name, String num, String[] payment_info){
@@ -43,6 +46,11 @@ public class User {
 
         this.lng = getUserLongitude(this);
         this.lat = getUserLatitude(this);
+        this.score = calcUserScore(this);
+    }
+
+    public float calcUserScore(User user){
+        return score;
     }
 
 }
