@@ -143,16 +143,17 @@
                         android:id="@+id/constraintLayout3"
                         android:layout_width="397dp"
                         android:layout_height="172dp"
-                        tools:layout_editor_absoluteX="-3dp"
-                        tools:layout_editor_absoluteY="0dp">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <TextView
                             android:id="@+id/textView80"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
                             android:text="Δυσκολία"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="177dp" />
+                            app:layout_constraintStart_toEndOf="@+id/imageView16"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/textView81"
@@ -167,17 +168,19 @@
                             android:id="@+id/textView82"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
                             android:text="Απαιτείται ρουχισμός"
-                            app:layout_constraintTop_toBottomOf="@+id/textView80"
-                            tools:layout_editor_absoluteX="177dp" />
+                            app:layout_constraintStart_toEndOf="@+id/imageView16"
+                            app:layout_constraintTop_toBottomOf="@+id/textView80" />
 
                         <TextView
                             android:id="@+id/textView83"
                             android:layout_width="108dp"
                             android:layout_height="40dp"
+                            android:layout_marginStart="19dp"
                             android:text="Προτεινόμενος εξοπλισμός:"
-                            app:layout_constraintTop_toBottomOf="@+id/textView82"
-                            tools:layout_editor_absoluteX="177dp" />
+                            app:layout_constraintStart_toEndOf="@+id/imageView16"
+                            app:layout_constraintTop_toBottomOf="@+id/textView82" />
 
                         <TextView
                             android:id="@+id/textView84"
@@ -193,10 +196,11 @@
                             android:id="@+id/textView85"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
                             android:layout_marginTop="4dp"
                             android:text="Ηλικίες:"
-                            app:layout_constraintTop_toBottomOf="@+id/textView83"
-                            tools:layout_editor_absoluteX="177dp" />
+                            app:layout_constraintStart_toEndOf="@+id/imageView16"
+                            app:layout_constraintTop_toBottomOf="@+id/textView83" />
 
                         <TextView
                             android:id="@+id/textView86"
@@ -209,7 +213,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/textView83" />
 
                         <Button
-                            android:id="@+id/button7"
+                            android:id="@+id/button25"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
@@ -235,78 +239,78 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout3"
+                    android:id="@+id/constraintLayout4"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:layout_marginEnd="16dp">
 
                     <TextView
-                        android:id="@+id/textView80"
+                        android:id="@+id/textView88"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="177dp"
-                        android:layout_marginBottom="161dp"
+                        android:layout_marginStart="19dp"
                         android:text="Δυσκολία"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView20"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView81"
+                        android:id="@+id/textView95"
                         android:layout_width="7dp"
                         android:layout_height="20dp"
                         android:layout_marginStart="8dp"
                         android:text="3"
-                        app:layout_constraintStart_toEndOf="@+id/textView80"
+                        app:layout_constraintStart_toEndOf="@+id/textView88"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView82"
+                        android:id="@+id/textView89"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
                         android:text="Δεν απαιτείται ρουχισμός"
-                        app:layout_constraintTop_toBottomOf="@+id/textView80"
-                        tools:layout_editor_absoluteX="177dp" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView20"
+                        app:layout_constraintTop_toBottomOf="@+id/textView95" />
 
                     <TextView
-                        android:id="@+id/textView83"
+                        android:id="@+id/textView96"
                         android:layout_width="108dp"
                         android:layout_height="40dp"
+                        android:layout_marginStart="14dp"
                         android:text="Προτεινόμενος εξοπλισμός:"
-                        app:layout_constraintTop_toBottomOf="@+id/textView82"
-                        tools:layout_editor_absoluteX="177dp" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView20"
+                        app:layout_constraintTop_toBottomOf="@+id/textView89" />
 
                     <TextView
-                        android:id="@+id/textView84"
+                        android:id="@+id/textView98"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="52dp"
+                        android:layout_marginTop="12dp"
                         android:text="Any"
-                        app:layout_constraintStart_toEndOf="@+id/textView83"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toEndOf="@+id/textView96"
+                        app:layout_constraintTop_toBottomOf="@+id/textView89" />
 
                     <TextView
-                        android:id="@+id/textView85"
+                        android:id="@+id/textView99"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="7dp"
                         android:text="Ηλικίες:"
-                        app:layout_constraintTop_toBottomOf="@+id/textView83"
-                        tools:layout_editor_absoluteX="177dp" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView20"
+                        app:layout_constraintTop_toBottomOf="@+id/textView96" />
 
                     <TextView
-                        android:id="@+id/textView86"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="4dp"
+                        android:id="@+id/textView100"
+                        android:layout_width="31dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="2dp"
                         android:text="8+"
-                        app:layout_constraintStart_toEndOf="@+id/textView85"
-                        app:layout_constraintTop_toBottomOf="@+id/textView83" />
+                        app:layout_constraintStart_toEndOf="@+id/textView99"
+                        app:layout_constraintTop_toBottomOf="@+id/textView96" />
 
                     <Button
-                        android:id="@+id/button7"
+                        android:id="@+id/button26"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="32dp"
@@ -330,74 +334,82 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout3"
+                    android:id="@+id/constraintLayout5"
                     android:layout_width="match_parent"
                     android:layout_height="187dp">
 
                     <TextView
-                        android:id="@+id/textView80"
+                        android:id="@+id/textView101"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
                         android:text="Δυσκολία"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:layout_editor_absoluteX="177dp" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView22"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView81"
+                        android:id="@+id/textView120"
                         android:layout_width="7dp"
                         android:layout_height="20dp"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
                         android:text="5"
-                        app:layout_constraintStart_toEndOf="@+id/textView80"
+                        app:layout_constraintStart_toEndOf="@+id/textView101"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView82"
+                        android:id="@+id/textView102"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
                         android:text="Δεν απαιτείται ρουχισμός"
-                        app:layout_constraintTop_toBottomOf="@+id/textView80"
-                        tools:layout_editor_absoluteX="177dp" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView22"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView83"
+                        android:id="@+id/textView103"
                         android:layout_width="108dp"
                         android:layout_height="40dp"
-                        android:text="Προτεινόμενος εξοπλισμός:"
-                        app:layout_constraintTop_toBottomOf="@+id/textView82"
-                        tools:layout_editor_absoluteX="177dp" />
-
-                    <TextView
-                        android:id="@+id/textView84"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="52dp"
-                        android:text="Any"
-                        app:layout_constraintStart_toEndOf="@+id/textView83"
+                        android:text="Προτεινόμενος εξοπλισμός:"
+                        app:layout_constraintStart_toEndOf="@+id/imageView22"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView85"
+                        android:id="@+id/textView104"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Ηλικίες:"
-                        app:layout_constraintTop_toBottomOf="@+id/textView83"
-                        tools:layout_editor_absoluteX="177dp" />
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="64dp"
+                        android:text="Any"
+                        app:layout_constraintStart_toEndOf="@+id/textView103"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView86"
+                        android:id="@+id/textView105"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="1dp"
+                        android:text="Ηλικίες:"
+                        app:layout_constraintStart_toEndOf="@+id/imageView22"
+                        app:layout_constraintTop_toBottomOf="@+id/textView103" />
+
+                    <TextView
+                        android:id="@+id/textView106"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="92dp"
                         android:text="12+"
-                        app:layout_constraintStart_toEndOf="@+id/textView85"
-                        app:layout_constraintTop_toBottomOf="@+id/textView83" />
+                        app:layout_constraintStart_toEndOf="@+id/textView105"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
-                        android:id="@+id/button7"
+                        android:id="@+id/button27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="32dp"
@@ -410,9 +422,9 @@
                         android:id="@+id/imageView22"
                         android:layout_width="157dp"
                         android:layout_height="171dp"
-                        app:srcCompat="@drawable/german_wine"
-                        tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="0dp" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/german_wine" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
