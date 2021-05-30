@@ -16,12 +16,13 @@ public class StationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);
-        //setContentView(R.layout.profile);
+        setContentView(R.layout.profile);
          //setContentView(R.layout.rewards);
         //setContentView(R.layout.available_shops);
         //setContentView(R.layout.payment_screen);
         //setContentView(R.layout.suggested_routes);
-        setContentView(R.layout.vehicle_selection);
+        //TODO suggested routes
+        //setContentView(R.layout.vehicle_selection);
         //setContentView(R.layout.shop_info);
 
 
@@ -34,7 +35,6 @@ public class StationActivity extends AppCompatActivity {
         // (δεν εχει θεμα το activity_main.xml αλλα η java )
         //TODO: αλλαγη χρωματος/στυλ στα buttons στο payment screen
         //TODO: γιατι θελουμε να τα αλλαξουν, τι εχουν; -Χρηστος
-        //TODO: ΕΙΝΑΙ ΑΣΧΗΜΑ ΚΑΙ ΔΕ ΣΥΜΒΑΔΙΖΟΥΝ ΜΕ ΤΗΝ ΑΙΣΘΗΤΙΚΗ ΜΟΥ - Ευα
         //vehicleList.setAdapter(arrayAdapter);
     }
 }
