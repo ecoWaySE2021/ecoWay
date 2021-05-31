@@ -7,7 +7,7 @@ public class User {
     String num;
     String[] payment_info = new String[100];
     float lng,lat;
-    boolean loginFlag;
+    static boolean loginFlag;
     float score; //ποσοστο οικολογικης μετακινησης
     Routes[] routeList = new Routes[100];
     int points;
