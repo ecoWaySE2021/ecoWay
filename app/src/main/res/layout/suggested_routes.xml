@@ -306,7 +306,8 @@
                             android:layout_marginBottom="4dp"
                             android:text="Δείτε τη διαδρομη>"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView16" />
 
                         <ImageView
                             android:id="@+id/imageView16"
