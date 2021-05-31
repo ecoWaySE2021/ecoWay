@@ -12,7 +12,7 @@ public class LogIn {
 
     public void signIn(){
         //Μεθοδος συνδεσης χρηστων.
-        if  auth() == true{
+        if  (auth() == true){
             User.loginFlag=true;
         }
 
@@ -24,8 +24,8 @@ public class LogIn {
         String name;
         String[] paymentCred = new String[100];
 
-        if checkSignUpCredentials()==true{
-            if checkPaymentCredentials()==true{
+        if (checkSignUpCredentials()==true){
+            if (checkPaymentCredentials()==true){
                 addUserToDatabase();
             }else{
                 //λαθος payment
