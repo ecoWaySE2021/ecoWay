@@ -4,16 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 //import android.widget.ArrayAdapter;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.Button;
 //import java.util.ArrayList;
 
 public class StationActivity extends AppCompatActivity {
     ListView vehicleList;
     //ArrayAdapter<String> arrayAdapter;
     //Station S1 = new Station(1, 2, 3, "Τριών Ναυάρχων", 1);
+    private Button login_butt;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.log_in_start);
+        login_butt = (Button) findViewById(R.id.login_guest);
+        login_butt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                setContentView(R.layout.home_google_map);
+            }
+        });
+
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);
         //setContentView(R.layout.profile);
@@ -24,7 +38,7 @@ public class StationActivity extends AppCompatActivity {
         //TODO suggested routes
         //setContentView(R.layout.vehicle_selection);
         //setContentView(R.layout.shop_info);
-        setContentView(R.layout.log_in_start);
+
 
 
         vehicleList = (ListView)findViewById(R.id.vehiclesList);
@@ -36,6 +50,8 @@ public class StationActivity extends AppCompatActivity {
         //TODO: αλλαγη χρωματος/στυλ στα buttons στο payment screen
         //TODO: γιατι θελουμε να τα αλλαξουν, τι εχουν; -Χρηστος
         //vehicleList.setAdapter(arrayAdapter);
+
     }
+
 }
 
