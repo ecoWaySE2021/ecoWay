@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button login_butt;
     private Button guest_login_butt;
     private Button register_butt;
+    private Button register_user;
     private ImageButton dropdown;
     private ImageButton dd_profile_button;
     private ImageButton dd_stations_button;
@@ -53,40 +54,45 @@ public class MainActivity extends AppCompatActivity {
         });
         //GUEST LOGIN
         guest_login_butt = (Button) findViewById(R.id.login_guest);
-        guest_login_butt.setOnClickListener(v -> setContentView(R.layout.home_google_map));
+        guest_login_butt.setOnClickListener(v -> {
+            setContentView(R.layout.home_google_map);
+               //HOME
+                dropdown = (ImageButton) findViewById(R.id.dropdown_butt);
+                dropdown.setOnClickListener( v2-> {
+                    setContentView(R.layout.home_google_map_dropdown);
+                    dd_profile_button = (ImageButton) findViewById(R.id.profilebuttondropdown);
+                    dd_profile_button.setOnClickListener(vp ->{
+                        setContentView(R.layout.profile);
+                    });
+                    dd_stations_button = (ImageButton) findViewById(R.id.stationsbuttondropdown);
+                    dd_stations_button.setOnClickListener((vs->{
+                        setContentView(R.layout.activity_station);
+                    }));
+                    dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
+                    dd_shops_button.setOnClickListener(vh->{
+                        setContentView(R.layout.available_shops);
+                    });
+
+                });
+        });
         //REGISTER
         register_butt = (Button) findViewById(R.id.register_button);
         register_butt.setOnClickListener(v -> {
             setContentView(R.layout.register);
-            Button register_user = (Button) findViewById(R.id.register_user_butt);
+            register_user = (Button) findViewById(R.id.register_user_butt);
             register_user.setOnClickListener(v1 -> {
-                String usrname = ((TextInputEditText)findViewById(R.id.username_input)).getEditableText().toString();
-                String pass = ((TextInputEditText)findViewById(R.id.pass_input)).getEditableText().toString();
-                String email = ((TextInputEditText) findViewById(R.id.email_input)).getEditableText().toString();
-                String name = ((TextInputEditText) findViewById(R.id.name_input)).getEditableText().toString();
-                Register.registerUser(usrname, pass, email, name);
+                //String usrname = ((TextInputEditText)findViewById(R.id.username_input)).getEditableText().toString();
+                //String pass = ((TextInputEditText)findViewById(R.id.pass_input)).getEditableText().toString();
+                //String email = ((TextInputEditText) findViewById(R.id.email_input)).getEditableText().toString();
+                //String name = ((TextInputEditText) findViewById(R.id.name_input)).getEditableText().toString();
+               // Register.registerUser(usrname, pass, email, name);
                 setContentView(R.layout.log_in_start);
 
             });
         });
-        //HOME
-        dropdown = (ImageButton) findViewById(R.id.dropdown_butt);
-        dropdown.setOnClickListener( v2-> {
-            setContentView(R.layout.home_google_map_dropdown);
-            dd_profile_button = (ImageButton) findViewById(R.id.profilebuttondropdown);
-            dd_profile_button.setOnClickListener(vp ->{
-                setContentView(R.layout.profile);
-            });
-            dd_stations_button = (ImageButton) findViewById(R.id.stationsbuttondropdown);
-            dd_stations_button.setOnClickListener((vs->{
-                setContentView(R.layout.activity_station);
-            }));
-            dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
-            dd_shops_button.setOnClickListener(vh->{
-                setContentView(R.layout.available_shops);
-            });
 
-        });
+
+
 
 
 
