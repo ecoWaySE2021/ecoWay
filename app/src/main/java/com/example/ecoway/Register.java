@@ -6,10 +6,15 @@ import java.security.NoSuchAlgorithmException;
 
 public class Register {
     static User[] users = new User[300];
+    static{
+        for(int i=0; i < 300; ++i ){
+            users[i] = new User();
+        }
+    }
     static int idx = 0;
 
     public Register(){
-
+        users = new User[300];
     }
 
     public static void registerUser(String username, String password, String mail, String name) throws NoSuchAlgorithmException {
@@ -22,7 +27,7 @@ public class Register {
         idx += 1;
     }
 
-    public Boolean findUser(String username, String password) throws NoSuchAlgorithmException {
+    public static Boolean findUser(String username, String password) throws NoSuchAlgorithmException {
         int index = -1;
         for(int i=0; i<300; i++){
             if(users[i].usrname.equals(username)){
@@ -30,7 +35,7 @@ public class Register {
                 break;
             }
         }
-        if(index >-1){
+        if(index > -1){
             MessageDigest digst = MessageDigest.getInstance("SHA=256");
             byte[] hashpass = digst.digest(password.getBytes(StandardCharsets.UTF_8));
             String hash = hashpass.toString();

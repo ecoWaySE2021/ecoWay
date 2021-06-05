@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private Button login_butt;
     private Button guest_login_butt;
     private Button register_butt;
-    Register reg = new Register();
 
     public MainActivity() throws NoSuchAlgorithmException {
     }
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
             {
                 try {
-                    flg = reg.findUser(username, password);
+                    flg = Register.findUser(username, password);
                 } catch (NoSuchAlgorithmException e) {
                     e.printStackTrace();
                 }
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         String email = ((TextInputEditText) findViewById(R.id.email_input)).getEditableText().toString();
                         String name = ((TextInputEditText) findViewById(R.id.name_input)).getEditableText().toString();
                         try {
-                            reg.registerUser(usrname, pass, email, name);
+                            Register.registerUser(usrname, pass, email, name);
                             setContentView(R.layout.log_in_start);
                         } catch (NoSuchAlgorithmException e) {
                             e.printStackTrace();

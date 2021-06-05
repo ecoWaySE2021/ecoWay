@@ -3,10 +3,10 @@ import java.util.ArrayList;
 
 public class User {
     static int id=0;
-    String usrname ;
-    String pass;
-    String name ;
-    String email;
+    String usrname = "USERNAME";
+    String pass = "PASSWORD";
+    String name = "NAME" ;
+    String email = "EMAIL";
     String num;
     String[] payment_info = new String[100];
     float lng,lat;
@@ -27,8 +27,9 @@ public class User {
 
     public User() {
         id += 1;
-        usrname = new String();
+        usrname = "Username";
         name = "Name";
+        pass = "Pass";
         num = "6981234567";
         for (int i=0; i<100; i++){
             payment_info[i] = " ";
