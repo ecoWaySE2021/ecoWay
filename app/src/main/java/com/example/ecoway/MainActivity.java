@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     private Button register_butt;
     Register reg = new Register();
 
+    public MainActivity() throws NoSuchAlgorithmException {
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

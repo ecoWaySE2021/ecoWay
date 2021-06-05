@@ -8,7 +8,8 @@ public class Register {
     static User[] users = new User[300];
     static int idx = 0;
 
-    public void Register(){
+    public Register(){
+
     }
 
     public static void registerUser(String username, String password, String mail, String name) throws NoSuchAlgorithmException {
@@ -24,7 +25,7 @@ public class Register {
     public Boolean findUser(String username, String password) throws NoSuchAlgorithmException {
         int index = -1;
         for(int i=0; i<300; i++){
-            if(this.users[i].usrname == username){
+            if(users[i].usrname.equals(username)){
                 index = i;
                 break;
             }
@@ -33,9 +34,9 @@ public class Register {
             MessageDigest digst = MessageDigest.getInstance("SHA=256");
             byte[] hashpass = digst.digest(password.getBytes(StandardCharsets.UTF_8));
             String hash = hashpass.toString();
-            if(this.users[index].pass == hash){
+            if(users[index].pass.equals(hash))
                 return true;
-            }
+
         }
         return false;
     }
