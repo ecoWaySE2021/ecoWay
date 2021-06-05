@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="643dp"
+        android:layout_height="1008dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324"
+        app:srcCompat="@mipmap/map_foreground" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="423dp"
+        android:layout_height="306dp"
+        android:layout_marginBottom="674dp"
+        android:background="#EBFFEB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/dropdown_butt"
+            android:layout_width="34dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="#EBFFEB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/dropdown1" />
+
+        <ImageView
+            android:id="@+id/logoEcoWay4"
+            android:layout_width="130dp"
+            android:layout_height="57dp"
+            android:layout_marginEnd="144dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.319"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.064"
+            app:srcCompat="@drawable/ecoway"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="70dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="240dp"
+            android:text="Profile"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView107"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:text="Affiliated Shops Near Me"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/shopsbuttondropdown"
+            app:layout_constraintTop_toBottomOf="@+id/textView94" />
+
+        <TextView
+            android:id="@+id/textView108"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Stations Near Me"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView107" />
+
+        <ImageButton
+            android:id="@+id/shopsbuttondropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView108"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView94"
+            app:srcCompat="@drawable/untitled_1" />
+
+        <ImageButton
+            android:id="@+id/stationsbuttondropdown"
+            android:layout_width="54dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:backgroundTint="#EBFFEB"
+            app:layout_constraintEnd_toStartOf="@+id/textView108"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopsbuttondropdown"
+            app:srcCompat="@android:drawable/ic_dialog_map"
+            app:tint="#636363" />
+
+        <ImageButton
+            android:id="@+id/profilebuttondropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/shopsbuttondropdown"
+            app:layout_constraintEnd_toStartOf="@+id/textView94"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoEcoWay4"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="102dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="314dp"
+        android:layout_marginTop="624dp"
+        android:background="#07FFFFFF"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
