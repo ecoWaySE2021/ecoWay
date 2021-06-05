@@ -66,6 +66,11 @@ public class LogIn {
         return User.loginFlag;
     }
 
+    public void GuestLogin(){
+        //Μέθοδος σύνδεσης χωρίς εγγραφή
+
+    }
+
 
 
 }

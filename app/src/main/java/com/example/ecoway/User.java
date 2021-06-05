@@ -3,8 +3,11 @@ import java.util.ArrayList;
 
 public class User {
     static int id=0;
-    String name;
-    String num;
+    String usrname =  new String();
+    String pass = new String();
+    String name = new String();
+    String email = new String();
+    String num= new String();
     String[] payment_info = new String[100];
     float lng,lat;
     static boolean loginFlag;
