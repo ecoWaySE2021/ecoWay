@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputEditText;
+
+import org.w3c.dom.Text;
 
 import java.security.NoSuchAlgorithmException;
 
@@ -34,52 +35,31 @@ public class MainActivity extends AppCompatActivity {
             String username = ((TextInputEditText) findViewById(R.id.username)).getEditableText().toString();
             String password = ((TextInputEditText) findViewById(R.id.password)).getEditableText().toString();
             Boolean flg = false;
+            { flg = Register.findUser(username, password); }
 
             {
-                try {
-                    flg = Register.findUser(username, password);
-                } catch (NoSuchAlgorithmException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            {
-                if (this.flg) {
+                if (flg) {
                     setContentView(R.layout.home_google_map);
                 }
             }
         });
 
         guest_login_butt = (Button) findViewById(R.id.login_guest);
-        guest_login_butt.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setContentView(R.layout.home_google_map);
-            }
-        });
+        guest_login_butt.setOnClickListener(v -> setContentView(R.layout.home_google_map));
 
         register_butt = (Button) findViewById(R.id.register_button);
-        register_butt.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setContentView(R.layout.register);
-                Button register_user = (Button) findViewById(R.id.register_user_butt);
-                register_user.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        String usrname = ((TextInputEditText) findViewById(R.id.username_input)).getEditableText().toString();
-                        String pass = ((TextInputEditText) findViewById(R.id.pass_input)).getEditableText().toString();
-                        String email = ((TextInputEditText) findViewById(R.id.email_input)).getEditableText().toString();
-                        String name = ((TextInputEditText) findViewById(R.id.name_input)).getEditableText().toString();
-                        try {
-                            Register.registerUser(usrname, pass, email, name);
-                            setContentView(R.layout.log_in_start);
-                        } catch (NoSuchAlgorithmException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-            }
+        register_butt.setOnClickListener(v -> {
+            setContentView(R.layout.register);
+            Button register_user = (Button) findViewById(R.id.register_user_butt);
+            register_user.setOnClickListener(v1 -> {
+                String usrname = ((TextInputEditText)findViewById(R.id.username_input)).getEditableText().toString();
+                String pass = ((TextInputEditText)findViewById(R.id.pass_input)).getEditableText().toString();
+                String email = ((TextInputEditText) findViewById(R.id.email_input)).getEditableText().toString();
+                String name = ((TextInputEditText) findViewById(R.id.name_input)).getEditableText().toString();
+                Register.registerUser(usrname, pass, email, name);
+                setContentView(R.layout.log_in_start);
+
+            });
         });
 
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
