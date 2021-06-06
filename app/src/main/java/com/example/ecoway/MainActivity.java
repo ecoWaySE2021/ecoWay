@@ -9,8 +9,6 @@ import android.widget.ImageButton;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.security.NoSuchAlgorithmException;
-
 public class MainActivity extends AppCompatActivity {
 
     private Button login_butt;
@@ -20,14 +18,12 @@ public class MainActivity extends AppCompatActivity {
     private Button cancel;
     private Button rent_this;
     private Button vehicle_type;
+    private Button vehicle_button;
     private ImageButton vehicle;
     private ImageButton dropdown;
     private ImageButton dd_profile_button;
     private ImageButton dd_stations_button;
     private ImageButton dd_shops_button;
-
-
-
 
 
     @Override
@@ -51,54 +47,13 @@ public class MainActivity extends AppCompatActivity {
                     setContentView(R.layout.home_google_map);
                 }
             }
+            //{this.inHome();}
         });
         //GUEST LOGIN
         guest_login_butt = (Button) findViewById(R.id.login_guest);
         guest_login_butt.setOnClickListener(v -> {
             setContentView(R.layout.home_google_map);
-               //HOME
-                dropdown = (ImageButton) findViewById(R.id.dropdown_butt);
-                dropdown.setOnClickListener( v2-> {
-                    setContentView(R.layout.home_google_map_dropdown);
-                    dd_profile_button = (ImageButton) findViewById(R.id.profilebuttondropdown);
-                    dd_profile_button.setOnClickListener(vp ->{
-                        setContentView(R.layout.profile);
-                    });
-                    dd_stations_button = (ImageButton) findViewById(R.id.stationsbuttondropdown);
-                    dd_stations_button.setOnClickListener((vs->{
-                        setContentView(R.layout.activity_station);
-                    }));
-                    dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
-                    dd_shops_button.setOnClickListener(vh->{
-                        setContentView(R.layout.available_shops);
-                    });
-
-                });
-
-            setContentView(R.layout.vehicle_rental_customizer);
-            //VEHICLE RENTAL CUSTOMIZER
-                cancel = (Button) findViewById(R.id.cancel_button3);
-            cancel.setOnClickListener(v4 -> {
-                setContentView(R.layout.vehicle_selection);
-            });
-            setContentView(R.layout.vehicle_rental_customizer);
-            //VEHICLE RENTAL CUSTOMIZER
-            rent_this = (Button) findViewById(R.id.button5);
-            rent_this.setOnClickListener(v7 -> {
-                setContentView(R.layout.payment_screen);
-            });
-
-            setContentView(R.layout.activity_station);
-            //ACTIVITY STATION
-                vehicle_type = (Button) findViewById(R.id.button2);
-                vehicle_type.setOnClickListener(v5 -> {
-                    setContentView(R.layout.vehicle_selection);
-                });
-                setContentView(R.layout.vehicle_selection);
-                vehicle = (ImageButton) findViewById(R.id.imageButton13);
-                vehicle.setOnClickListener(v6 -> {
-                    setContentView(R.layout.vehicle_rental_customizer);
-                });
+            this.inHome();
         });
         //REGISTER
         register_butt = (Button) findViewById(R.id.register_button);
@@ -123,8 +78,46 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        }
+
+    protected void inHome(){ //HOME
+        dropdown = (ImageButton) findViewById(R.id.dropdown_butt);
+        dropdown.setOnClickListener( v2-> {
+            setContentView(R.layout.home_google_map_dropdown);
+            dd_profile_button = (ImageButton) findViewById(R.id.profilebuttondropdown);
+            dd_profile_button.setOnClickListener(vp ->{
+                setContentView(R.layout.profile);
+            });
+            dd_stations_button = (ImageButton) findViewById(R.id.stationsbuttondropdown);
+            dd_stations_button.setOnClickListener((vs->{
+                setContentView(R.layout.activity_station);
+                vehicle_button = (Button) findViewById(R.id.vehicle_button);
+                vehicle_button.setOnClickListener((vhb -> {
+                    setContentView(R.layout.vehicle_selection);
+                    vehicle = (ImageButton) findViewById(R.id.imageButton13);
+                    vehicle.setOnClickListener(v6 -> {
+                        setContentView(R.layout.vehicle_rental_customizer);
+                        //VEHICLE RENTAL CUSTOMIZER
+                        rent_this = (Button) findViewById(R.id.button5);
+                        rent_this.setOnClickListener(v7 -> {
+                            setContentView(R.layout.payment_screen);
+                            //VEHICLE RENTAL CUSTOMIZER
+                            cancel = (Button) findViewById(R.id.cancel_button3);
+                            cancel.setOnClickListener(v4 -> {
+                                setContentView(R.layout.vehicle_selection);
+                            });
+                        });
+                    });
+                }));
 
 
+            }));
+            dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
+            dd_shops_button.setOnClickListener(vh->{
+                setContentView(R.layout.available_shops);
+            });
+
+        });
 
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);

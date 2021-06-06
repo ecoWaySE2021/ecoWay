@@ -117,7 +117,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/vehicle_button"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
@@ -150,7 +150,7 @@
                 app:layout_constraintVertical_bias="0.042" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/vehicle_button"
                 android:layout_width="387dp"
                 android:layout_height="41dp"
                 android:layout_marginTop="8dp"
