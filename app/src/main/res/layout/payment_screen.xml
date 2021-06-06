@@ -79,7 +79,7 @@
             android:layout_marginStart="172dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
+            app:tint="#636363"
             app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
             app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
             app:layout_constraintHorizontal_bias="0.488"
@@ -94,7 +94,7 @@
             android:layout_height="48dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
+            app:tint="#636363"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.751"
@@ -109,7 +109,7 @@
             android:layout_height="49dp"
             android:background="@color/white"
             android:backgroundTint="#EBFFEB"
-            android:tint="#636363"
+            app:tint="#636363"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/profileButton"
             app:layout_constraintHorizontal_bias="0.291"
@@ -285,7 +285,7 @@
             app:layout_constraintVertical_bias="0.626" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/cancel_button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CANCEL"

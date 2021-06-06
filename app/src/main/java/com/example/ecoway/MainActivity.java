@@ -9,8 +9,6 @@ import android.widget.ImageButton;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import org.w3c.dom.Text;
-
 import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private Button guest_login_butt;
     private Button register_butt;
     private Button register_user;
+    private Button cancel;
+    private Button rent_this;
+    private Button vehicle_type;
+    private ImageButton vehicle;
     private ImageButton dropdown;
     private ImageButton dd_profile_button;
     private ImageButton dd_stations_button;
@@ -26,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public MainActivity() throws NoSuchAlgorithmException {
-    }
 
 
     @Override
@@ -74,6 +74,31 @@ public class MainActivity extends AppCompatActivity {
                     });
 
                 });
+
+            setContentView(R.layout.vehicle_rental_customizer);
+            //VEHICLE RENTAL CUSTOMIZER
+                cancel = (Button) findViewById(R.id.cancel_button3);
+            cancel.setOnClickListener(v4 -> {
+                setContentView(R.layout.vehicle_selection);
+            });
+            setContentView(R.layout.vehicle_rental_customizer);
+            //VEHICLE RENTAL CUSTOMIZER
+            rent_this = (Button) findViewById(R.id.button5);
+            rent_this.setOnClickListener(v7 -> {
+                setContentView(R.layout.payment_screen);
+            });
+
+            setContentView(R.layout.activity_station);
+            //ACTIVITY STATION
+                vehicle_type = (Button) findViewById(R.id.button2);
+                vehicle_type.setOnClickListener(v5 -> {
+                    setContentView(R.layout.vehicle_selection);
+                });
+                setContentView(R.layout.vehicle_selection);
+                vehicle = (ImageButton) findViewById(R.id.imageButton13);
+                vehicle.setOnClickListener(v6 -> {
+                    setContentView(R.layout.vehicle_rental_customizer);
+                });
         });
         //REGISTER
         register_butt = (Button) findViewById(R.id.register_button);
@@ -89,8 +114,13 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.log_in_start);
 
             });
+            setContentView(R.layout.payment_screen);
+            //PAYMENT
+            cancel = (Button) findViewById(R.id.cancel_button2);
+            cancel.setOnClickListener(v3 -> {
+                setContentView(R.layout.vehicle_rental_customizer);
+            });
         });
-
 
 
 
