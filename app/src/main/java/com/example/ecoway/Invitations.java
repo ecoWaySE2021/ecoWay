@@ -60,7 +60,7 @@ public class Invitations {
         User active_usr = Register.getUserByID(user_id);
         ArrayList <Invitations> ActiveInv = new ArrayList<>();
         for(int i=0; i<active_usr.invitationsList.size(); ++i){
-            if(active_usr.invitationsList.get(i).status.equals("ACTIVE")){
+            if(active_usr.invitationsList.get(i).status==Status.accept){
                 ActiveInv.add(active_usr.invitationsList.get(i));
             }
         }
@@ -82,10 +82,16 @@ public class Invitations {
         User active_usr = Register.getUserByID(user_id);
         ArrayList <Invitations> AccInv =  new ArrayList<>();
         for(int i=0; i<active_usr.invitationsList.size(); ++i){
-            if(active_usr.invitationsList.get(i).status.equals("ACCEPTED")){
+            if(active_usr.invitationsList.get(i).status==Status.accept){
                 AccInv.add(active_usr.invitationsList.get(i));
             }
         }
         return AccInv;
     }
+
+    public void setAccepted(int id){
+        this.status = Status.accept;
+    }
+
+
 }
