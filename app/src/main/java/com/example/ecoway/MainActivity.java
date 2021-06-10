@@ -150,9 +150,7 @@ public class MainActivity extends AppCompatActivity {
         usrname.setText(String.valueOf(active_user.usrname));
         // getUserData
         for(int count = 0; count<3; count+=1){
-            String array[] = {"Helmet", "Gloves"};
-            int intarray[] = {1, 2, 3 ,4, 5};
-            Routes myroute = new Routes( (float)Math.random(), (float)Math.random(), "Address", "Type", array, (int)Math.random(),intarray,(int)Math.random(),(int)Math.random(),(int)Math.random());
+            Routes myroute = new Routes( );
             active_user.addRouteToRouteList(myroute);
         }
         Button myroutes = (Button) findViewById(R.id.diadromes);
