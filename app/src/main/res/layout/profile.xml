@@ -221,6 +221,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
+            android:translationZ="90dp"
             app:layout_constraintBottom_toBottomOf="@+id/pontoi"
             app:layout_constraintEnd_toEndOf="@+id/pontoi"
             app:layout_constraintHorizontal_bias="0.873"
