@@ -160,10 +160,24 @@
         android:layout_marginTop="414dp"
         android:layout_marginEnd="182dp"
         android:layout_marginBottom="298dp"
-        android:text="TextView"
+        android:text="25 Euros"
+        android:textColor="#070505"
+        android:textColorHighlight="#000000"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView115"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 Hours"
+        android:textColor="#070505"
+        android:textColorHighlight="#000000"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="287dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
