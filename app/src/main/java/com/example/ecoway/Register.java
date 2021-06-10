@@ -17,31 +17,11 @@ public class Register {
     static int idx = 0;
 
     public Register(){
-        users = new User[300];
+
     }
 
-    public static void registerUser(String username, String password, String mail, String name)  {
-        users[idx].usrname = username;
-        users[idx].pass = password;
-        users[idx].email = mail;
-        users[idx].name = name;
+    public static void registerUser(User toSign)  {
+        users[idx] = toSign;
         idx += 1;
-    }
-
-    public static Boolean findUser(String username, String password)  {
-        int index = -1;
-        for(int i=0; i<300; i++){
-            if(users[i].usrname.equals(username)){
-                index = i;
-                break;
-            }
-        }
-        if(index > -1){
-
-            if(users[index].pass.equals(password))
-                return true;
-
-        }
-        return false;
     }
 }

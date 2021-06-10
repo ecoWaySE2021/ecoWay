@@ -1,5 +1,6 @@
 package com.example.ecoway;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -10,48 +11,60 @@ public class LogIn {
     String id;
     String password;
 
-    public void signIn(){
+    public static User signIn(User user){
         //Μεθοδος συνδεσης χρηστων.
-        if  (auth() == true){
-            User.loginFlag=true;
+        if  (auth(user) == true){
+            user.loginFlag=true;
         }
-
+        return user;
     }
 
-    public void signUp(){
+    public static void signUp(String username,String password,String email,String name){
         //Μεθοδος εγγραφης χρηστων
-
-        String name;
         String[] paymentCred = new String[100];
+        User toSignUp = new User(username, password, email, name);
+        Register.registerUser(toSignUp);
 
-        if (checkSignUpCredentials()==true){
-            if (checkPaymentCredentials()==true){
-                addUserToDatabase();
-            }else{
+       //if (checkSignUpCredentials()==true){
+            //if (checkPaymentCredentials()==true){
+              //  addUserToDatabase();
+           // }else{
                 //λαθος payment
-            }
-        }else{
+           // }
+       // }else{
             //λαθος creds
-        }
-
-
-        signIn();
+       // }
     }
 
-    public boolean auth(){
+    public static boolean auth(User logged_user){
         //Μεθοδος αυθεντικοποιησης χρηστων
+        int index = -1;
+        for(int i=0; i<300; i++){
+            if(Register.users[i].usrname.equals(logged_user.usrname)){
+                index = i;
+                break;
+            }
+        }
+        if(index > -1) {
+            if (Register.users[index].pass.equals(logged_user.pass)) {
+                logged_user.loginFlag = true;
+                return true;
 
-        return loggedFlag;
+            }
+        }
+        return false;
     }
 
     public boolean checkSignUpCredentials(){
         //Σωστα Creds
-        return correctCredentials;
+       // return correctCredentials;
+        return true;
     }
 
     public boolean checkPaymentCredentials(){
         //Σωστα Creds
-        return correctCredentials;
+       // return correctCredentials;
+        return true;
     }
 
     public void addUserToDatabase(){
@@ -60,10 +73,10 @@ public class LogIn {
     }
 
 
-    public boolean guestLogIn(){
-        //Μεθοδος συνδεσης χωρις εγγραφη
-        User.loginFlag=false;
-        return User.loginFlag;
+    public static User guestLogIn(){
+        User guest = new User("guest", "guest", "guest", "Guest User" );
+        guest.loginFlag = true;
+        return guest;
     }
 
     public void GuestLogin(){

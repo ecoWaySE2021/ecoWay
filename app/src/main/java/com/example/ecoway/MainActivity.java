@@ -3,14 +3,17 @@ package com.example.ecoway;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.android.gms.plus.model.people.Person;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     private Button login_butt;
     private Button guest_login_butt;
     private Button register_butt;
@@ -24,69 +27,70 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton dd_profile_button;
     private ImageButton dd_stations_button;
     private ImageButton dd_shops_button;
-
+    private User active_user = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.log_in_start);
-        //LOGINS
-        login_butt = (Button) findViewById(R.id.login_button);
-        login_butt.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){}
 
+        //LOGIN
+        login_butt = (Button) findViewById(R.id.login_button);
+        login_butt.setOnClickListener(vlogin -> {
+            //@Override
             String username = ((TextInputEditText) findViewById(R.id.username)).getEditableText().toString();
             String password = ((TextInputEditText) findViewById(R.id.password)).getEditableText().toString();
-            Boolean flg = false;
-            {System.out.println(username);}
-            { flg = Register.findUser(username, password); }
-
-            {
-                if (flg) {
-                    setContentView(R.layout.home_google_map);
-                }
-            }
-            //{this.inHome();}
+            active_user = LogIn.signIn(active_user);
         });
         //GUEST LOGIN
         guest_login_butt = (Button) findViewById(R.id.login_guest);
-        guest_login_butt.setOnClickListener(v -> {
-            setContentView(R.layout.home_google_map);
-            this.inHome();
+        guest_login_butt.setOnClickListener(vguest -> {
+            active_user = LogIn.guestLogIn();
         });
         //REGISTER
         register_butt = (Button) findViewById(R.id.register_button);
-        register_butt.setOnClickListener(v -> {
+        register_butt.setOnClickListener(vregister -> {
             setContentView(R.layout.register);
             register_user = (Button) findViewById(R.id.register_user_butt);
             register_user.setOnClickListener(v1 -> {
-                //String usrname = ((TextInputEditText)findViewById(R.id.username_input)).getEditableText().toString();
-                //String pass = ((TextInputEditText)findViewById(R.id.pass_input)).getEditableText().toString();
-                //String email = ((TextInputEditText) findViewById(R.id.email_input)).getEditableText().toString();
-                //String name = ((TextInputEditText) findViewById(R.id.name_input)).getEditableText().toString();
-               // Register.registerUser(usrname, pass, email, name);
-                setContentView(R.layout.log_in_start);
+                String usrname = ((TextInputLayout) findViewById(R.id.username_input)).getEditText().toString();
+                String pass = ((TextInputLayout) findViewById(R.id.pass_input)).getEditText().toString();
+                String email = ((TextInputLayout) findViewById(R.id.email_input)).getEditText().toString();
+                String name = ((TextInputLayout) findViewById(R.id.name_input)).getEditText().toString();
+                LogIn.signUp(usrname, pass, email, name);
+                active_user.setAll(usrname, pass, email, name);
+                active_user = LogIn.signIn(active_user);
 
             });
-            setContentView(R.layout.payment_screen);
+            //setContentView(R.layout.payment_screen);
             //PAYMENT
-            cancel = (Button) findViewById(R.id.cancel_button2);
-            cancel.setOnClickListener(v3 -> {
-                setContentView(R.layout.vehicle_rental_customizer);
-            });
+            //cancel = (Button) findViewById(R.id.cancel_button2);
+            // cancel.setOnClickListener(v3 -> {
+            // setContentView(R.layout.vehicle_rental_customizer);
+            // });
         });
 
-
+        if(active_user.loginFlag){
+            setContentView(R.layout.home_google_map);
+            inHome();
         }
+    }
 
     protected void inHome(){ //HOME
         dropdown = (ImageButton) findViewById(R.id.dropdown_butt);
         dropdown.setOnClickListener( v2-> {
             setContentView(R.layout.home_google_map_dropdown);
+
+            ImageButton dd_drodown;
+            dd_drodown = (ImageButton) findViewById(R.id.dropdown_butt2) ;
+            dd_drodown.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+            });
+
             dd_profile_button = (ImageButton) findViewById(R.id.profilebuttondropdown);
             dd_profile_button.setOnClickListener(vp ->{
-                setContentView(R.layout.profile);
+                UserProfile();
+
             });
             dd_stations_button = (ImageButton) findViewById(R.id.stationsbuttondropdown);
             dd_stations_button.setOnClickListener((vs->{
@@ -119,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+
+
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);
         //setContentView(R.layout.profile);
@@ -132,4 +138,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    protected void UserProfile(){
+        setContentView(R.layout.profile);
+        ImageButton dropdown_profile = (ImageButton) findViewById(R.id.menuBarProfile);
+        dropdown_profile.setOnClickListener(dpv -> {
+            setContentView(R.layout.home_google_map);
+            inHome();
+        });
+        TextView usrname = (TextView) findViewById(R.id.username);
+
+
+    }
 }

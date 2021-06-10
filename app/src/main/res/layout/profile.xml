@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageButton
-            android:id="@+id/menuBar"
+            android:id="@+id/menuBarProfile"
             android:layout_width="38dp"
             android:layout_height="26dp"
             android:background="#EBFFEB"

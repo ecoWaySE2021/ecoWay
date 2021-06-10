@@ -10,7 +10,7 @@ public class User {
     String num;
     String[] payment_info = new String[100];
     float lng,lat;
-    static boolean loginFlag;
+    boolean loginFlag;
     float score; //ποσοστο οικολογικης μετακινησης
     Routes[] routeList = new Routes[100];
     int points;
@@ -20,10 +20,7 @@ public class User {
         return lng;
     }
 
-    protected float getUserLatitude(User usr){
-
-        return lat;
-    }
+    protected float getUserLatitude(User usr){ return lat; }
 
     public User() {
         id += 1;
@@ -44,14 +41,16 @@ public class User {
         points = 0;
     }
 
-    public User(String name, String num, String[] payment_info){
+    public User(String username, String password, String email, String name){
         this.id++;
         this.loginFlag = false;
+        this.usrname = username;
+        this.pass= password;
         this.name = name;
-        this.num = num;
-        for(int i=0; i<payment_info.length; i++){
-            this.payment_info[i]=payment_info[i];
-        }
+        //this.num = num;
+        //for(int i=0; i<payment_info.length; i++){
+            //this.payment_info[i]=payment_info[i];
+        //}
 
         this.lng = getUserLongitude(this);
         this.lat = getUserLatitude(this);
@@ -68,5 +67,12 @@ public class User {
 
     public void removePoints(User user, int points){
         user.points = user.points - points;
+    }
+
+    public void setAll(String username, String password, String email, String name){
+        this.usrname = username;
+        this.pass = password;
+        this.email = email;
+        this.name = name;
     }
 }
