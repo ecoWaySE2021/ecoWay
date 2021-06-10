@@ -173,11 +173,17 @@
         android:id="@+id/textView115"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="287dp"
+        android:layout_marginEnd="293dp"
+        android:layout_marginBottom="417dp"
         android:text="5 Hours"
         android:textColor="#070505"
         android:textColorHighlight="#000000"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="287dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
