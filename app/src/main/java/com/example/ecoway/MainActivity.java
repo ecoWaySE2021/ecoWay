@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton dd_shops_button;
     private User active_user = new User();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void inHome(){ //HOME
+        active_user.points = 666;
         dropdown = (ImageButton) findViewById(R.id.dropdown_butt);
         dropdown.setOnClickListener( v2-> {
             setContentView(R.layout.home_google_map_dropdown);
@@ -124,9 +126,17 @@ public class MainActivity extends AppCompatActivity {
 
             }));
             dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
-            dd_shops_button.setOnClickListener(vh->{
+            dd_shops_button.setOnClickListener(vshops->{
                 setContentView(R.layout.available_shops);
             });
+
+            ImageButton dd_invitations_button = (ImageButton) findViewById(R.id.invitationsbuttondropdown);
+            dd_invitations_button.setOnClickListener(vinv->{
+                // TODO invitations screen
+            });
+
+            ImageButton dd_settings = (ImageButton) findViewById(R.id.settingsdropdown);
+
 
         });
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
@@ -164,8 +174,9 @@ public class MainActivity extends AppCompatActivity {
         Button mypoints = (Button) findViewById(R.id.pontoi);
         mypoints.setOnClickListener(vpoints -> {
             int user_points = active_user.points;
-            //TODO: οθόνη πόντων UI
-            //TODO: από την οθόνη πόντων παει στο Εξαργυρωση πόντων στο κατάστημα
+            TextView points = (TextView) findViewById(R.id.userpoints);
+            points.setText(Integer.toString(user_points));
+            setContentView(R.layout.rewards);
         });
 
         //Button spend_points = (Button) findViewById(R.id.personal_points);
@@ -181,6 +192,9 @@ public class MainActivity extends AppCompatActivity {
             // TODO: οθόνη στατιστικών χήστη
         });
 
+    }
+
+    protected void UserInvitations(){
 
 
     }
