@@ -168,11 +168,19 @@ public class MainActivity extends AppCompatActivity {
             //TODO: από την οθόνη πόντων παει στο Εξαργυρωση πόντων στο κατάστημα
         });
 
+        //Button spend_points = (Button) findViewById(R.id.personal_points);
+        //spend_points.setOnClickListener(vspend -> {
+            //setContentView(R.layout.rewards);
+            //TODO: οθόνη πόντων UI
+            //TODO: από την οθόνη πόντων παει στο Εξαργυρωση πόντων στο κατάστημα
+        //});
+
         Button mystats = (Button) findViewById(R.id.statistika);
         mystats.setOnClickListener(vstats -> {
             float user_stats = active_user.score;
             // TODO: οθόνη στατιστικών χήστη
         });
+
 
 
     }
