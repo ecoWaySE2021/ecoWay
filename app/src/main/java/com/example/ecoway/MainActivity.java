@@ -181,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
         Button mystats = (Button) findViewById(R.id.statistika);
         mystats.setOnClickListener(vstats -> {
             float user_stats = active_user.score;
+            setContentView(R.layout.statistics);
             // TODO: οθόνη στατιστικών χρήστη - doing it Spyros
         });
 
