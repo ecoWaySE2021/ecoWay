@@ -41,11 +41,19 @@ public class MainActivity extends AppCompatActivity {
             String username = ((TextInputEditText) findViewById(R.id.username)).getEditableText().toString();
             String password = ((TextInputEditText) findViewById(R.id.password)).getEditableText().toString();
             active_user = LogIn.signIn(active_user);
+            if(active_user.loginFlag){
+                setContentView(R.layout.home_google_map);
+                inHome();
+            }
         });
         //GUEST LOGIN
         guest_login_butt = (Button) findViewById(R.id.login_guest);
         guest_login_butt.setOnClickListener(vguest -> {
             active_user = LogIn.guestLogIn();
+            if(active_user.loginFlag){
+                setContentView(R.layout.home_google_map);
+                inHome();
+            }
         });
         //REGISTER
         register_butt = (Button) findViewById(R.id.register_button);
@@ -60,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
                 LogIn.signUp(usrname, pass, email, name);
                 active_user.setAll(usrname, pass, email, name);
                 active_user = LogIn.signIn(active_user);
-
+                if(active_user.loginFlag){
+                    setContentView(R.layout.home_google_map);
+                    inHome();
+                }
             });
             //setContentView(R.layout.payment_screen);
             //PAYMENT
@@ -69,11 +80,6 @@ public class MainActivity extends AppCompatActivity {
             // setContentView(R.layout.vehicle_rental_customizer);
             // });
         });
-
-        if(active_user.loginFlag){
-            setContentView(R.layout.home_google_map);
-            inHome();
-        }
     }
 
     protected void inHome(){ //HOME
