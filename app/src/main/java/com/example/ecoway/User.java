@@ -13,6 +13,7 @@ public class User {
     boolean loginFlag;
     float score; //ποσοστο οικολογικης μετακινησης
     Routes[] routeList = new Routes[100];
+    static int route_idx = 0;
     int points;
     ArrayList <Invitations> invitationsList = new ArrayList<Invitations>();
 
@@ -44,9 +45,9 @@ public class User {
     public User(String username, String password, String email, String name){
         this.id++;
         this.loginFlag = false;
-        this.usrname = username;
-        this.pass= password;
-        this.name = name;
+        usrname = username;
+        pass= password;
+        name = name;
         //this.num = num;
         //for(int i=0; i<payment_info.length; i++){
             //this.payment_info[i]=payment_info[i];
@@ -75,4 +76,14 @@ public class User {
         this.email = email;
         this.name = name;
     }
+
+    public void addRouteToRouteList( Routes toAdd){
+        this.routeList[route_idx] = toAdd;
+        route_idx += 1;
+    }
+
+    public Routes getRouteDetails(int index){
+        return this.routeList[index];
+    }
+
 }

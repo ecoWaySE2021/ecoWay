@@ -1,5 +1,6 @@
 package com.example.ecoway;
 
+
 public class Routes {
 
     float latitde, longitude; //Συντεταγμένες
@@ -75,6 +76,7 @@ public class Routes {
         this.pop = pop;
 
     }
+
 
     //Μέθοδος Υπολογισμού Χιλιομέτρων
     //Μέθοδος Υπολογισμού Ώρας

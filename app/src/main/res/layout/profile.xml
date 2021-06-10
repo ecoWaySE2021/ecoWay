@@ -158,6 +158,21 @@
             app:layout_constraintVertical_bias="0.25" />
 
         <Button
+            android:id="@+id/diadromes"
+            android:layout_width="413dp"
+            android:layout_height="49dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Οι διαδρομές μου"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.383" />
+
+        <Button
             android:id="@+id/OiPlirwmesMou"
             android:layout_width="409dp"
             android:layout_height="44dp"
@@ -171,19 +186,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.132" />
-
-        <Switch
-            android:id="@+id/notifications"
-            android:layout_width="413dp"
-            android:layout_height="51dp"
-            android:text="ΕΙΔΟΠΟΙΗΣΕΙΣ"
-            android:textAlignment="viewStart"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/stoixeiaButton"
-            app:layout_constraintVertical_bias="0.383" />
 
         <CheckBox
             android:id="@+id/PatiniacheckBox"
