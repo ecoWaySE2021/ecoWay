@@ -86,4 +86,8 @@ public class User {
         return this.routeList[index];
     }
 
+    public User getUserData(){
+        return this;
+    }
+
 }

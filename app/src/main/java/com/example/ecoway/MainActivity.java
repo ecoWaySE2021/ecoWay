@@ -148,7 +148,8 @@ public class MainActivity extends AppCompatActivity {
         });
         TextView usrname = (TextView) findViewById(R.id.username);
         usrname.setText(String.valueOf(active_user.usrname));
-        // getUserData
+        // TODO Στο register δεν γινεται σωστα display το username
+        User user_data = active_user.getUserData();
         for(int count = 0; count<3; count+=1){
             Routes myroute = new Routes( );
             active_user.addRouteToRouteList(myroute);
