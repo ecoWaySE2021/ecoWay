@@ -36,7 +36,6 @@ public class StationActivity extends AppCompatActivity {
         //setContentView(R.layout.available_shops);
         //setContentView(R.layout.payment_screen);
         //setContentView(R.layout.suggested_routes);
-        //TODO suggested routes
         //setContentView(R.layout.vehicle_selection);
         //setContentView(R.layout.shop_info);
 
@@ -46,10 +45,6 @@ public class StationActivity extends AppCompatActivity {
         //arrayAdapter = new ArrayAdapter<String>(this,
             // R.layout.activity_main, S1.vehicle_List);
 
-        //TODO: Η λίστα δε φορτωνει και κάνει το app να κρασαρει
-        // (δεν εχει θεμα το activity_main.xml αλλα η java )
-        //TODO: αλλαγη χρωματος/στυλ στα buttons στο payment screen
-        //TODO: γιατι θελουμε να τα αλλαξουν, τι εχουν; -Χρηστος
         //vehicleList.setAdapter(arrayAdapter);
 
     }

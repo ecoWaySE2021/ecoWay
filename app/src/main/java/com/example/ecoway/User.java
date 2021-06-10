@@ -15,7 +15,7 @@ public class User {
     Routes[] routeList = new Routes[100];
     static int route_idx = 0;
     int points;
-    ArrayList <Invitations> invitationsList = new ArrayList<Invitations>();
+    ArrayList <Invitations> invitationsList = new ArrayList<>();
 
     protected float getUserLongitude(User usr){
         return lng;
@@ -89,5 +89,7 @@ public class User {
     public User getUserData(){
         return this;
     }
+
+
 
 }

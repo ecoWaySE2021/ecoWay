@@ -24,4 +24,14 @@ public class Register {
         users[idx] = toSign;
         idx += 1;
     }
+
+    public static User getUserByID(int id){
+        User user =  new User();
+        for(int i=0; i<300; ++i){
+            if(users[i].id == id){
+                user = users[i];
+            }
+        }
+        return user;
+    }
 }

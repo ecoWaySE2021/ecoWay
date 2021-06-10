@@ -1,6 +1,7 @@
 package com.example.ecoway;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.ArrayList;
 
 enum Status
 {
@@ -14,7 +15,9 @@ enum Type
 public class Invitations {
 
     static int id=0;
-    String  receiver, sender, location;
+    String  location;
+    User sender = new User();
+    User receiver = new User();
     Type type;
     Status status;
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -22,14 +25,13 @@ public class Invitations {
 
     public Invitations(){
         this.id++;
-        this.receiver="";
-        this.sender="";
+
         this.location="";
         this.type=Type.output;
         this.formatter.format(this.info);
     }
 
-    public Invitations(String receiver, String sender, String location, Type type){
+    public Invitations(User receiver, User sender, String location, Type type){
         this.id++;
         this.receiver=receiver;
         this.sender=sender;
@@ -52,5 +54,38 @@ public class Invitations {
         {
             status=Status.reject;
         }
+    }
+
+    public static ArrayList <Invitations> getActiveInv(int user_id){
+        User active_usr = Register.getUserByID(user_id);
+        ArrayList <Invitations> ActiveInv = new ArrayList<>();
+        for(int i=0; i<active_usr.invitationsList.size(); ++i){
+            if(active_usr.invitationsList.get(i).status.equals("ACTIVE")){
+                ActiveInv.add(active_usr.invitationsList.get(i));
+            }
+        }
+        return ActiveInv;
+    }
+
+    public static ArrayList <Invitations> getMyInvs(int user_id){
+        User active_usr = Register.getUserByID(user_id);
+        ArrayList <Invitations> MyInv =  new ArrayList<>();
+        for(int i=0; i<active_usr.invitationsList.size(); ++i){
+            if(active_usr.invitationsList.get(i).sender == active_usr){
+                MyInv.add(active_usr.invitationsList.get(i));
+            }
+        }
+        return MyInv;
+    }
+
+    public static ArrayList <Invitations> getAccInv(int user_id){
+        User active_usr = Register.getUserByID(user_id);
+        ArrayList <Invitations> AccInv =  new ArrayList<>();
+        for(int i=0; i<active_usr.invitationsList.size(); ++i){
+            if(active_usr.invitationsList.get(i).status.equals("ACCEPTED")){
+                AccInv.add(active_usr.invitationsList.get(i));
+            }
+        }
+        return AccInv;
     }
 }

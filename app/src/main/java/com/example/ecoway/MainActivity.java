@@ -12,6 +12,7 @@ import com.google.android.gms.plus.model.people.Person;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import android.widget.TextView;
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -115,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
             ImageButton dd_invitations_button = (ImageButton) findViewById(R.id.invitationsbuttondropdown);
             dd_invitations_button.setOnClickListener(vinv->{
                 setContentView(R.layout.invitations);
+                UserInvitations();
             });
 
             ImageButton dd_settings = (ImageButton) findViewById(R.id.settingsdropdown);
@@ -185,7 +187,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void UserInvitations(){
+        Button active = (Button) findViewById(R.id.activeInv);
+        active.setOnClickListener(vactive -> {
+            ArrayList <Invitations> activeInvs =  Invitations.getActiveInv(active_user.id);
+            //TODO active invitations screen
+        });
 
+        Button mine = (Button) findViewById(R.id.mineInv);
+        mine.setOnClickListener(vmine -> {
+            ArrayList <Invitations> myInvs = Invitations.getMyInvs(active_user.id);
+            //TODO my invitations screen
+        });
+
+        Button accepted = (Button) findViewById(R.id.accInv);
+        accepted.setOnClickListener(vacc ->{
+            ArrayList <Invitations> accInvs = Invitations.getAccInv(active_user.id);
+            //TODO active invitations screen
+            //TODO accept/decline
+        });
+
+        Button makeInv = (Button) findViewById(R.id.makeInv);
+        makeInv.setOnClickListener(vmake -> {
+            //TODO input name/email for invitations screen
+
+        });
 
     }
 
