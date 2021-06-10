@@ -13,6 +13,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
     private Button login_butt;
     private Button guest_login_butt;
@@ -128,32 +129,43 @@ public class MainActivity extends AppCompatActivity {
             });
 
         });
-
-
-
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);
-        //setContentView(R.layout.profile);
         //setContentView(R.layout.rewards);
-        //setContentView(R.layout.available_shops);
         //setContentView(R.layout.payment_screen);
         //setContentView(R.layout.suggested_routes);
-        //TODO suggested routes
-        //setContentView(R.layout.vehicle_selection);
         //setContentView(R.layout.shop_info);
-
     }
 
 
     protected void UserProfile(){
+
         setContentView(R.layout.profile);
         ImageButton dropdown_profile = (ImageButton) findViewById(R.id.menuBarProfile);
-        dropdown_profile.setOnClickListener(dpv -> {
+        dropdown_profile.setOnClickListener(vmenu -> {
             setContentView(R.layout.home_google_map);
             inHome();
         });
         TextView usrname = (TextView) findViewById(R.id.username);
-
+        String toView = active_user.usrname;
+        usrname.setText(toView);
+        // getUserData
+        for(int count = 0; count<3; count+=1){
+            String array[] = {"Helmet", "Gloves"};
+            int intarray[] = {1, 2, 3 ,4, 5};
+            Routes myroute = new Routes( (float)Math.random(), (float)Math.random(), "Address", "Type", array, (int)Math.random(),intarray,(int)Math.random(),(int)Math.random(),(int)Math.random());
+            active_user.addRouteToRouteList(myroute);
+        }
+        Button myroutes = (Button) findViewById(R.id.diadromes);
+        myroutes.setOnClickListener(vroutes->{
+            setContentView(R.layout.suggested_routes);
+            active_user.getRouteDetails((int)(Math.random() * (100)));
+        });
+        // TODO: Στο sequence στατιστικων θα πρεπει να επιλεγει ο χρηστης απο την οθονη του προφιλ
+        //  να δει τις διαδρομες του, αλλιως ανακατευθυνεται αμεσως στην διαδρομη χωρις να βλεπει προφιλ
 
     }
+
+
 }
+
