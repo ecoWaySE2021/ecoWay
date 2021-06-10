@@ -158,9 +158,22 @@ public class MainActivity extends AppCompatActivity {
         myroutes.setOnClickListener(vroutes->{
             setContentView(R.layout.suggested_routes);
             Routes RouteDetails = active_user.getRouteDetails((int)(Math.random() * (100)));
+            //TODO : οθονη με λεπτομεριες διαδρομης UI
         });
-        // TODO: Στο sequence στατιστικων θα πρεπει να επιλεγει ο χρηστης απο την οθονη του προφιλ
-        //  να δει τις διαδρομες του, αλλιως ανακατευθυνεται αμεσως στην διαδρομη χωρις να βλεπει προφιλ
+
+        Button mypoints = (Button) findViewById(R.id.pontoi);
+        mypoints.setOnClickListener(vpoints -> {
+            int user_points = active_user.points;
+            //TODO: οθόνη πόντων UI
+            //TODO: από την οθόνη πόντων παει στο Εξαργυρωση πόντων στο κατάστημα
+        });
+
+        Button mystats = (Button) findViewById(R.id.statistika);
+        mystats.setOnClickListener(vstats -> {
+            float user_stats = active_user.score;
+            // TODO: οθόνη στατιστικών χήστη
+        });
+
 
     }
 
