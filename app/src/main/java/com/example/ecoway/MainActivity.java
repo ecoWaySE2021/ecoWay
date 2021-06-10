@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             dd_drodown = (ImageButton) findViewById(R.id.dropdown_butt2);
             dd_drodown.setOnClickListener(vd -> {
                 setContentView(R.layout.home_google_map);
+                inHome();
             });
 
             dd_profile_button = (ImageButton) findViewById(R.id.profilebuttondropdown);
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
             ImageButton dd_invitations_button = (ImageButton) findViewById(R.id.invitationsbuttondropdown);
             dd_invitations_button.setOnClickListener(vinv->{
-                // TODO invitations screen
+                setContentView(R.layout.invitations);
             });
 
             ImageButton dd_settings = (ImageButton) findViewById(R.id.settingsdropdown);
@@ -131,8 +132,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     protected void UserProfile(){
-
         setContentView(R.layout.profile);
+        ImageButton home = (ImageButton) findViewById(R.id.homeButton);
+        home.setOnClickListener(vhome -> {
+            setContentView(R.layout.home_google_map);
+            inHome();
+        });
         ImageButton dropdown_profile = (ImageButton) findViewById(R.id.menuBarProfile);
         dropdown_profile.setOnClickListener(vmenu -> {
             setContentView(R.layout.home_google_map);
@@ -150,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
         myroutes.setOnClickListener(vroutes->{
             setContentView(R.layout.suggested_routes);
             Routes RouteDetails = active_user.getRouteDetails((int)(Math.random() * (100)));
-            //TODO : οθονη με λεπτομεριες διαδρομης UI
         });
 
         Button mypoints = (Button) findViewById(R.id.pontoi);
@@ -159,6 +163,10 @@ public class MainActivity extends AppCompatActivity {
             TextView points = (TextView) findViewById(R.id.userpoints);
             points.setText(Integer.toString(user_points));
             setContentView(R.layout.rewards);
+            home.setOnClickListener(vhome -> {
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
         });
 
         //Button spend_points = (Button) findViewById(R.id.personal_points);
