@@ -46,7 +46,7 @@
             app:srcCompat="@drawable/ecoway" />
 
         <TextView
-            android:id="@+id/textView121"
+            android:id="@+id/tastatistikamou"
             android:layout_width="163dp"
             android:layout_height="38dp"
             android:text="Τα στατιστικά μου"
