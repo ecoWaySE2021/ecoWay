@@ -75,7 +75,7 @@
             app:layout_constraintVertical_bias="0.024" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/makeInv"
             android:layout_width="408dp"
             android:layout_height="47dp"
             android:backgroundTint="#C1D6C1"
@@ -92,7 +92,7 @@
             app:layout_constraintVertical_bias="0.076" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/activeInv"
             android:layout_width="403dp"
             android:layout_height="51dp"
             android:layout_marginTop="26dp"
@@ -104,11 +104,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button8"
+            app:layout_constraintTop_toBottomOf="@+id/makeInv"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/mineInv"
             android:layout_width="406dp"
             android:layout_height="52dp"
             android:backgroundTint="#C1D6C1"
@@ -119,11 +119,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button10"
+            app:layout_constraintTop_toBottomOf="@+id/activeInv"
             app:layout_constraintVertical_bias="0.043" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/accInv"
             android:layout_width="406dp"
             android:layout_height="53dp"
             android:backgroundTint="#C1D6C1"
@@ -134,7 +134,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button11"
+            app:layout_constraintTop_toBottomOf="@+id/mineInv"
             app:layout_constraintVertical_bias="0.081" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

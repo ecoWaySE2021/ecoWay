@@ -90,10 +90,12 @@
             android:layout_marginTop="16dp"
             android:text="Stations Near Me"
             android:textSize="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView116"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintHorizontal_bias="0.464"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView107" />
+            app:layout_constraintTop_toBottomOf="@+id/textView107"
+            app:layout_constraintVertical_bias="0.208" />
 
         <TextView
             android:id="@+id/textView116"
