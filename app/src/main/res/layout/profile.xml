@@ -147,7 +147,7 @@
             android:layout_width="413dp"
             android:layout_height="49dp"
             android:backgroundTint="#FFFFFF"
-            android:text="Οι πόντοι μου"
+            android:text="Εξαργυρωση ποντων"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -215,6 +215,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/stoixeiaButton"
             app:layout_constraintVertical_bias="0.638" />
+
+        <TextView
+            android:id="@+id/userpoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="@+id/pontoi"
+            app:layout_constraintEnd_toEndOf="@+id/pontoi"
+            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/OiPlirwmesMou"
+            app:layout_constraintVertical_bias="0.357" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -160,6 +160,18 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/invitation" />
 
+        <ImageButton
+            android:id="@+id/settingsdropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.896"
+            app:layout_constraintStart_toEndOf="@+id/dropdown_butt2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.958"
+            app:srcCompat="@drawable/set_up_svg_icon_free_settings_icon_black_11553450888ksmklhagoh" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
