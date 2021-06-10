@@ -147,8 +147,7 @@ public class MainActivity extends AppCompatActivity {
             inHome();
         });
         TextView usrname = (TextView) findViewById(R.id.username);
-        String toView = active_user.usrname;
-        usrname.setText(toView);
+        usrname.setText(String.valueOf(active_user.usrname));
         // getUserData
         for(int count = 0; count<3; count+=1){
             String array[] = {"Helmet", "Gloves"};
@@ -159,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         Button myroutes = (Button) findViewById(R.id.diadromes);
         myroutes.setOnClickListener(vroutes->{
             setContentView(R.layout.suggested_routes);
-            active_user.getRouteDetails((int)(Math.random() * (100)));
+            Routes RouteDetails = active_user.getRouteDetails((int)(Math.random() * (100)));
         });
         // TODO: Στο sequence στατιστικων θα πρεπει να επιλεγει ο χρηστης απο την οθονη του προφιλ
         //  να δει τις διαδρομες του, αλλιως ανακατευθυνεται αμεσως στην διαδρομη χωρις να βλεπει προφιλ

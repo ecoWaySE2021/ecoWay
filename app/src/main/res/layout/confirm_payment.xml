@@ -94,7 +94,7 @@
         android:layout_marginTop="208dp"
         android:layout_marginEnd="299dp"
         android:layout_marginBottom="496dp"
-        android:background="#EBFFE"
+        android:background="#EBFFEB"
         android:text="5/Hour"
         android:textColor="#070505"
         android:textColorHighlight="#000000"
