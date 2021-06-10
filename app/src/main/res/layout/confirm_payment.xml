@@ -11,36 +11,63 @@
         android:id="@+id/button2"
         android:layout_width="295dp"
         android:layout_height="95dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="419dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="170dp"
         android:background="#000000"
         android:backgroundTint="#000000"
         android:foregroundTint="#000000"
         android:text="Confirm Return and Payment"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="419dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="295dp"
         android:layout_height="95dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="20dp"
         android:text="Back"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="560dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002" />
 
     <ImageView
         android:id="@+id/imageView29"
         android:layout_width="110dp"
         android:layout_height="63dp"
-        app:srcCompat="@drawable/ecoway"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="28dp" />
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="640dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ecoway" />
 
     <ImageView
         android:id="@+id/imageView28"
         android:layout_width="92dp"
         android:layout_height="89dp"
-        app:srcCompat="@mipmap/appicon"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="626dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/appicon" />
 
     <TextView
         android:id="@+id/Title"
@@ -58,5 +85,85 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/textView110"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginBottom="496dp"
+        android:background="#EBFFE"
+        android:text="5/Hour"
+        android:textColor="#070505"
+        android:textColorHighlight="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="176dp"
+        android:layout_height="223dp"
+        android:layout_marginStart="236dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.299"
+        app:srcCompat="@drawable/bike1" />
+
+    <TextView
+        android:id="@+id/textView111"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="246dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="466dp"
+        android:text="1487 Km"
+        android:textColor="#070505"
+        android:textColorHighlight="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView113"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="358dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="339dp"
+        android:text="Total Cost:"
+        android:textColor="#070505"
+        android:textColorHighlight="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView114"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="414dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="298dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
