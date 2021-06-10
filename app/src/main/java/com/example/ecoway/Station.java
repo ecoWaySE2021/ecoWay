@@ -14,7 +14,13 @@ public class Station{
         String[] vehicle_List;
         String location;
         int id;
-
+        public void setAll(int bikes, int rollers, int elec, String loc, int ID){
+                this.vehicle_amount[0]=bikes;
+                this.vehicle_amount[1]=rollers;
+                this.vehicle_amount[2]=elec;
+                this.location = loc;
+                this.id = ID;
+        }
         public void AddVehicleAmount(String type){
                 if (type.equals(this.vehicle_List[0])){
                         this.vehicle_amount[0] += this.vehicle_amount[0];

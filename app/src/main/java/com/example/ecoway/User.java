@@ -90,6 +90,13 @@ public class User {
         return this;
     }
 
+    public  Float[] getUserLocation(int id){
+        User usr = Register.getUserByID(id);
+        Float[] loc = {0.0f, 0.0f};
+        loc[0] = getUserLatitude(usr);
+        loc[1] = getUserLongitude(usr);
+        return loc;
+    }
 
 
 }

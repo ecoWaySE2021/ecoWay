@@ -35,7 +35,7 @@
             app:srcCompat="@drawable/sample_station" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/station_name"
             android:layout_width="183dp"
             android:layout_height="37dp"
             android:layout_marginBottom="16dp"

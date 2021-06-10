@@ -75,6 +75,8 @@ public class LogIn {
 
     public static User guestLogIn(){
         User guest = new User("guest", "guest", "guest", "Guest User" );
+        guest.lat = 0.1f;
+        guest.lng = 0.1f;
         guest.loginFlag = true;
         return guest;
     }

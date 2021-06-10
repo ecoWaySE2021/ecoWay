@@ -12,6 +12,8 @@ public class Register {
         }
         users[16].usrname = "test";
         users[16].pass = "test123";
+        users[16].lng = 0.1f;
+        users[16].lat = 0.1f;
     }
 
     static int idx = 0;

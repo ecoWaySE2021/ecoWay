@@ -1,5 +1,6 @@
 package com.example.ecoway;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -13,6 +14,11 @@ import com.google.android.gms.plus.model.people.Person;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.List;
 import java.util.ArrayList;
 
 
@@ -31,12 +37,14 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton dd_stations_button;
     private ImageButton dd_shops_button;
     private User active_user = new User();
+    private ArrayList <Station> stations = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.log_in_start);
+        stations.add(new Station(5, 2, 1, "Τριών Ναυάρχων", 0));
 
         //LOGIN
         login_butt = (Button) findViewById(R.id.login_button);
@@ -106,7 +114,14 @@ public class MainActivity extends AppCompatActivity {
             dd_stations_button = (ImageButton) findViewById(R.id.stationsbuttondropdown);
             dd_stations_button.setOnClickListener((vs->{
                 setContentView(R.layout.activity_station);
-                InStation();
+                Float[] location = active_user.getUserLocation(active_user.id);
+                if(location[0]==0.0f && location[1]==0.0f){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Please turn on your location services", Toast.LENGTH_SHORT);
+                    toast.show();
+                }else{
+                    InStation(getNearestStation(location));
+                }
+
             }));
 
             dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
@@ -137,7 +152,10 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.shop_info);
     }
 
+    protected Station getNearestStation(Float[] loc){
 
+        return stations.get(0);
+    }
     protected void UserProfile(){
         setContentView(R.layout.profile);
         ImageButton home = (ImageButton) findViewById(R.id.homeButton);
@@ -196,7 +214,25 @@ public class MainActivity extends AppCompatActivity {
         Button active = (Button) findViewById(R.id.activeInv);
         active.setOnClickListener(vactive -> {
             ArrayList <Invitations> activeInvs =  Invitations.getActiveInv(active_user.id);
-            //TODO active invitations screen
+            setContentView(R.layout.active_invitations);
+            Button accept = (Button) findViewById(R.id.accept);
+            accept.setOnClickListener(vaccept ->{
+                String email =  ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
+                for(int i=0; i<activeInvs.size(); i++){
+                    if(activeInvs.get(i).sender.email.equals(email)){
+                        activeInvs.get(i).setAccepted(activeInvs.get(i).id);
+                    }
+                }
+            });
+            Button decline = (Button) findViewById(R.id.decline);
+            decline.setOnClickListener(vdec->{
+                String email =  ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
+                for(int i=0; i<activeInvs.size(); i++){
+                    if(activeInvs.get(i).sender.email.equals(email)){
+                        activeInvs.remove(activeInvs.get(i));
+                    }
+                }
+            });
         });
 
         Button mine = (Button) findViewById(R.id.mineInv);
@@ -208,25 +244,7 @@ public class MainActivity extends AppCompatActivity {
         Button accepted = (Button) findViewById(R.id.accInv);
         accepted.setOnClickListener(vacc ->{
             ArrayList <Invitations> accInvs = Invitations.getAccInv(active_user.id);
-            setContentView(R.layout.active_invitations);
-            Button accept = (Button) findViewById(R.id.accept);
-            accept.setOnClickListener(vaccept ->{
-                String email =  ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
-                for(int i=0; i<accInvs.size(); i++){
-                    if(accInvs.get(i).sender.email.equals(email)){
-                        accInvs.get(i).setAccepted(accInvs.get(i).id);
-                    }
-                }
-            });
-            Button decline = (Button) findViewById(R.id.decline);
-            decline.setOnClickListener(vdec->{
-                String email =  ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
-                for(int i=0; i<accInvs.size(); i++){
-                    if(accInvs.get(i).sender.email.equals(email)){
-                        accInvs.remove(accInvs.get(i));
-                    }
-                }
-            });
+            //TODO accepted invitations screen
         });
 
         Button makeInv = (Button) findViewById(R.id.makeInv);
@@ -237,7 +255,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    protected void InStation() {
+    protected void InStation(Station station) {
+        TextView name = (TextView) findViewById(R.id.station_name);
+        name.setText(station.location);
         vehicle_button = (Button) findViewById(R.id.vehicle_button);
         vehicle_button.setOnClickListener((vhb -> {
             setContentView(R.layout.vehicle_selection);
