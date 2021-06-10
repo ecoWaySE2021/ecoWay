@@ -24,7 +24,7 @@ public class Routes {
         this.type = " ";
         this.equip[0] = "NONE";
         this.difficulty = 0;
-        for(int i =0; i<6; i++){
+        for(int i =0; i<3; i++){
             this.dur[i] = 0;
         }
         this.age_limit = 100;

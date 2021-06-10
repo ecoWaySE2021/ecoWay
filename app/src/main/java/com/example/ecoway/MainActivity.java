@@ -147,19 +147,17 @@ public class MainActivity extends AppCompatActivity {
             inHome();
         });
         TextView usrname = (TextView) findViewById(R.id.username);
-        String toView = active_user.usrname;
-        usrname.setText(toView);
-        // getUserData
+        usrname.setText(String.valueOf(active_user.usrname));
+        // TODO Στο register δεν γινεται σωστα display το username
+        User user_data = active_user.getUserData();
         for(int count = 0; count<3; count+=1){
-            String array[] = {"Helmet", "Gloves"};
-            int intarray[] = {1, 2, 3 ,4, 5};
-            Routes myroute = new Routes( (float)Math.random(), (float)Math.random(), "Address", "Type", array, (int)Math.random(),intarray,(int)Math.random(),(int)Math.random(),(int)Math.random());
+            Routes myroute = new Routes( );
             active_user.addRouteToRouteList(myroute);
         }
         Button myroutes = (Button) findViewById(R.id.diadromes);
         myroutes.setOnClickListener(vroutes->{
             setContentView(R.layout.suggested_routes);
-            active_user.getRouteDetails((int)(Math.random() * (100)));
+            Routes RouteDetails = active_user.getRouteDetails((int)(Math.random() * (100)));
         });
         // TODO: Στο sequence στατιστικων θα πρεπει να επιλεγει ο χρηστης απο την οθονη του προφιλ
         //  να δει τις διαδρομες του, αλλιως ανακατευθυνεται αμεσως στην διαδρομη χωρις να βλεπει προφιλ
