@@ -124,8 +124,12 @@ public class MainActivity extends AppCompatActivity {
 
             }));
             dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
-            dd_shops_button.setOnClickListener(vh->{
+            dd_shops_button.setOnClickListener(vshops->{
                 setContentView(R.layout.available_shops);
+            });
+            ImageButton dd_invitations_button = (ImageButton) findViewById(R.id.invitationsbuttondropdown);
+            dd_invitations_button.setOnClickListener(vinv->{
+                // TODO invitations screen
             });
 
         });
@@ -174,6 +178,9 @@ public class MainActivity extends AppCompatActivity {
             // TODO: οθόνη στατιστικών χήστη
         });
 
+    }
+
+    protected void UserInvitations(){
 
     }
 
