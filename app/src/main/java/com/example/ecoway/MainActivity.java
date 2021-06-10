@@ -89,42 +89,23 @@ public class MainActivity extends AppCompatActivity {
         dropdown = (ImageButton) findViewById(R.id.dropdown_butt);
         dropdown.setOnClickListener( v2-> {
             setContentView(R.layout.home_google_map_dropdown);
-
             ImageButton dd_drodown;
-            dd_drodown = (ImageButton) findViewById(R.id.dropdown_butt2) ;
-            dd_drodown.setOnClickListener(vd->{
+            dd_drodown = (ImageButton) findViewById(R.id.dropdown_butt2);
+            dd_drodown.setOnClickListener(vd -> {
                 setContentView(R.layout.home_google_map);
             });
 
             dd_profile_button = (ImageButton) findViewById(R.id.profilebuttondropdown);
             dd_profile_button.setOnClickListener(vp ->{
                 UserProfile();
-
             });
+
             dd_stations_button = (ImageButton) findViewById(R.id.stationsbuttondropdown);
             dd_stations_button.setOnClickListener((vs->{
                 setContentView(R.layout.activity_station);
-                vehicle_button = (Button) findViewById(R.id.vehicle_button);
-                vehicle_button.setOnClickListener((vhb -> {
-                    setContentView(R.layout.vehicle_selection);
-                    vehicle = (ImageButton) findViewById(R.id.imageButton13);
-                    vehicle.setOnClickListener(v6 -> {
-                        setContentView(R.layout.vehicle_rental_customizer);
-                        //VEHICLE RENTAL CUSTOMIZER
-                        rent_this = (Button) findViewById(R.id.button5);
-                        rent_this.setOnClickListener(v7 -> {
-                            setContentView(R.layout.payment_screen);
-                            //VEHICLE RENTAL CUSTOMIZER
-                            cancel = (Button) findViewById(R.id.cancel_button3);
-                            cancel.setOnClickListener(v4 -> {
-                                setContentView(R.layout.vehicle_selection);
-                            });
-                        });
-                    });
-                }));
-
-
+                InStation();
             }));
+
             dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
             dd_shops_button.setOnClickListener(vshops->{
                 setContentView(R.layout.available_shops);
@@ -136,12 +117,13 @@ public class MainActivity extends AppCompatActivity {
             });
 
             ImageButton dd_settings = (ImageButton) findViewById(R.id.settingsdropdown);
-
+            dd_settings.setOnClickListener(vset->{
+                // TODO settings
+            });
 
         });
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
         // setContentView(R.layout.activity_station);
-        //setContentView(R.layout.rewards);
         //setContentView(R.layout.payment_screen);
         //setContentView(R.layout.suggested_routes);
         //setContentView(R.layout.shop_info);
@@ -191,6 +173,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    protected void InStation() {
+        vehicle_button = (Button) findViewById(R.id.vehicle_button);
+        vehicle_button.setOnClickListener((vhb -> {
+            setContentView(R.layout.vehicle_selection);
+            vehicle = (ImageButton) findViewById(R.id.imageButton13);
+            vehicle.setOnClickListener(v6 -> {
+                setContentView(R.layout.vehicle_rental_customizer);
+                //VEHICLE RENTAL CUSTOMIZER
+                rent_this = (Button) findViewById(R.id.button5);
+                rent_this.setOnClickListener(v7 -> {
+                    setContentView(R.layout.payment_screen);
+                    //VEHICLE RENTAL CUSTOMIZER
+                    cancel = (Button) findViewById(R.id.cancel_button3);
+                    cancel.setOnClickListener(v4 -> {
+                        setContentView(R.layout.vehicle_selection);
+                    });
+                });
+            });
+        }));
+    }
 }
 
