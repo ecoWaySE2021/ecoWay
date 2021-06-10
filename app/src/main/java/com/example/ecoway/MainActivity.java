@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.google.android.gms.plus.model.people.Person;
@@ -123,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
             dd_settings.setOnClickListener(vset->{
                 // TODO settings
             });
+            ImageButton IT = (ImageButton) findViewById(R.id.supp);
+            IT.setOnClickListener(vsupp -> {
+                // TODO IT FAQ screen
+            });
 
         });
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
@@ -203,8 +208,25 @@ public class MainActivity extends AppCompatActivity {
         Button accepted = (Button) findViewById(R.id.accInv);
         accepted.setOnClickListener(vacc ->{
             ArrayList <Invitations> accInvs = Invitations.getAccInv(active_user.id);
-            //TODO active invitations screen
-            //TODO accept/decline
+            setContentView(R.layout.active_invitations);
+            Button accept = (Button) findViewById(R.id.accept);
+            accept.setOnClickListener(vaccept ->{
+                String email =  ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
+                for(int i=0; i<accInvs.size(); i++){
+                    if(accInvs.get(i).sender.email.equals(email)){
+                        accInvs.get(i).setAccepted(accInvs.get(i).id);
+                    }
+                }
+            });
+            Button decline = (Button) findViewById(R.id.decline);
+            decline.setOnClickListener(vdec->{
+                String email =  ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
+                for(int i=0; i<accInvs.size(); i++){
+                    if(accInvs.get(i).sender.email.equals(email)){
+                        accInvs.remove(accInvs.get(i));
+                    }
+                }
+            });
         });
 
         Button makeInv = (Button) findViewById(R.id.makeInv);
