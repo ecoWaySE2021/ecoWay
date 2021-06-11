@@ -144,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
 
             Button dd_stations_byname = (Button) findViewById(R.id.stationByName);
             dd_stations_byname.setOnClickListener(vsname->{
-                //TODO station by name screen
                 setContentView(R.layout.station_by_name);
                 EditText station_name = (EditText) findViewById(R.id.station_by_name);
                 Button search = (Button) findViewById(R.id.button8);
@@ -166,16 +165,81 @@ public class MainActivity extends AppCompatActivity {
 
             ImageButton dd_settings = (ImageButton) findViewById(R.id.settingsdropdown);
             dd_settings.setOnClickListener(vset->{
-                // TODO settings
-            });
-            ImageButton IT = (ImageButton) findViewById(R.id.supp);
-            IT.setOnClickListener(vsupp -> {
-                // TODO IT FAQ screen
+                // TODO settings screen
+                setContentView(R.layout.user_settings);
+                //EDIT INFO
+                Button edit_my_info = (Button) findViewById(R.id.edit_user_info);
+                edit_my_info.setOnClickListener(vinfo->{
+                    EditUserInfo(active_user);
+                });
+                // PAST ROUTES
+                Button pastpays = (Button) findViewById(R.id.pastpays);
+                pastpays.setOnClickListener(vpast->{
+                    settingsPayments(active_user);
+
+                    });
+                });
+                //NOTIFICATIONS
+
             });
 
+            ImageButton IT = (ImageButton) findViewById(R.id.supp);
+            IT.setOnClickListener(vsupp -> {
+                setContentView(R.layout.support);
+                Button faq = (Button) findViewById(R.id.FAQ);
+                faq.setOnClickListener(vfaq ->{
+                    //TODO FAQ screen
+                    setContentView(R.layout.faq);
+                });
+                Button chat = (Button) findViewById(R.id.LIVECHAT);
+                chat.setOnClickListener(vchat->{
+                    //TODO Livechat screen
+                    User guru = new User();
+                    guru.usrname = "Guru";
+                    setContentView(R.layout.livechat);
+                    //TODO livechat merthod with user guru
+                    livechat(guru);
+                });
+            });
+
+        }
+
+    private void settingsPayments(User active_user) {
+        //TODO oi plhrwmes mou
+        setContentView(R.layout.pastpays);
+        Routes[] routeList = Routes.getPastRoutes(active_user.id);
+        Button pay_info = (Button) findViewById(R.id.payinfo);
+        pay_info.setOnClickListener(vpinfo->{
+            setContentView(R.layout.payment_info_validation);
+            ImageButton msc = (ImageButton) findViewById(R.id.MASTERCRD);
+            msc.setOnClickListener(vmsc->{
+                Payment.getVer(active_user.payment_info);
+                active_user.setPayment(active_user.payment_info);
+            });
         });
+    }
+
+    private void EditUserInfo(User active_user) {
+        //TODO user info edit screen
+        setContentView(R.layout.user_info);
+        // name edit
+        EditText editname = (EditText) findViewById(R.id.editname);
+        EditText changepass = (EditText) findViewById(R.id.changepass);
+        EditText editemail = (EditText) findViewById(R.id.editemail);
+
+        Button setall = (Button) findViewById(R.id.setall);
+        setall.setOnClickListener(vsetall->{
+            if(!(editname.toString().equals(""))){
+                active_user.setName(editname.toString());
+            }
+            if(!(changepass.toString().equals(""))){
+                active_user.setPass(changepass.toString());
+            }
+            if(!(editemail.toString().equals(""))){
+                active_user.setEmail(editemail.toString());
+            }
+    });
         // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
-        // setContentView(R.layout.activity_station);
         //setContentView(R.layout.payment_screen);
         //setContentView(R.layout.suggested_routes);
         //setContentView(R.layout.shop_info);

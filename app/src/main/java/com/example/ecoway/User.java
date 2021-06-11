@@ -11,6 +11,7 @@ public class User {
     String[] payment_info = new String[100];
     float lng,lat;
     boolean loginFlag;
+    boolean flagB=  true;
     float score; //ποσοστο οικολογικης μετακινησης
     Routes[] routeList = new Routes[100];
     static int route_idx = 0;
@@ -90,6 +91,19 @@ public class User {
         return this;
     }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setPass(String password){
+        this.pass = password;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+
     public  Float[] getUserLocation(int id){
         User usr = Register.getUserByID(id);
         Float[] loc = {0.0f, 0.0f};
@@ -106,5 +120,10 @@ public class User {
             }
         }
         return naruto;
+    }
+
+
+    public void setPayment(String[] payment_info) {
+
     }
 }

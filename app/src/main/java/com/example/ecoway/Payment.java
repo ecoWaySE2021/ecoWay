@@ -26,5 +26,9 @@ public class Payment{
         this.state=state;
     }
 
+    public static Boolean getVer(String[] paymentDATA){
+        return true;
+    }
+
 
 }

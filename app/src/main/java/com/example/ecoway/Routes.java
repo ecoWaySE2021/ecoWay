@@ -77,6 +77,12 @@ public class Routes {
 
     }
 
+    public static Routes[] getPastRoutes(int id){
+        User salesman = Register.getUserByID(id);
+        Routes[] routelist = salesman.routeList;
+        return routelist;
+    }
+
 
     //Μέθοδος Υπολογισμού Χιλιομέτρων
     //Μέθοδος Υπολογισμού Ώρας

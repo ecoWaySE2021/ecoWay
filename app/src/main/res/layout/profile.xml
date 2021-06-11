@@ -128,6 +128,21 @@
             app:layout_constraintVertical_bias="0.527" />
 
         <Button
+            android:id="@+id/statistika2"
+            android:layout_width="406dp"
+            android:layout_height="47dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Τα στατιστικα μου"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.527" />
+
+        <Button
             android:id="@+id/stoixeiaButton"
             android:layout_width="406dp"
             android:layout_height="47dp"
@@ -228,6 +243,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/OiPlirwmesMou"
             app:layout_constraintVertical_bias="0.357" />
+
+        <Switch
+            android:id="@+id/notifications_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:text="NOTIFICATIONS"
+            android:translationZ="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Protimiseis"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/stoixeiaButton"
+            app:layout_constraintVertical_bias="0.524"
+            tools:checked="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
