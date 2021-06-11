@@ -360,7 +360,6 @@ public class MainActivity extends AppCompatActivity {
         mystats.setOnClickListener(vstats -> {
             float user_stats = active_user.score;
             setContentView(R.layout.statistics);
-            // TODO: οθόνη στατιστικών χρήστη - doing it Spyros
         });
 
     }
