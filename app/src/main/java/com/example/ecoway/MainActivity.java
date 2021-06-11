@@ -13,6 +13,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import android.widget.RadioGroup;
+import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Switch;
@@ -195,16 +196,16 @@ public class MainActivity extends AppCompatActivity {
                 Button faq = (Button) findViewById(R.id.FAQ);
                 faq.setOnClickListener(vfaq ->{
                     //TODO FAQ screen
-                    setContentView(R.layout.faq);
+                    //setContentView(R.layout.faq);
                 });
                 Button chat = (Button) findViewById(R.id.LIVECHAT);
                 chat.setOnClickListener(vchat->{
                     //TODO Livechat screen
                     User guru = new User();
                     guru.usrname = "Guru";
-                    setContentView(R.layout.livechat);
+                    //setContentView(R.layout.livechat);
                     //TODO livechat merthod with user guru
-                    livechat(guru);
+                    //livechat(guru);
                 });
             });
 
@@ -264,7 +265,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void settingsPayments(User active_user) {
-        //TODO oi plhrwmes mou
         setContentView(R.layout.pastpays);
         Routes[] routeList = Routes.getPastRoutes(active_user.id);
         Button pay_info = (Button) findViewById(R.id.payinfo);
@@ -274,12 +274,12 @@ public class MainActivity extends AppCompatActivity {
             msc.setOnClickListener(vmsc->{
                 Payment.getVer(active_user.payment_info);
                 active_user.setPayment(active_user.payment_info);
+                UserProfile();
             });
         });
     }
 
     private void EditUserInfo(User active_user) {
-        //TODO user info edit screen
         setContentView(R.layout.user_info);
         // name edit
         EditText editname = (EditText) findViewById(R.id.editname);
@@ -298,10 +298,7 @@ public class MainActivity extends AppCompatActivity {
                 active_user.setEmail(editemail.toString());
             }
     });
-        // Μεχρι να συνδέσουμε τα activities, καντε uncomment τις γραμμές που δε θελετε
-        //setContentView(R.layout.payment_screen);
-        //setContentView(R.layout.suggested_routes);
-        //setContentView(R.layout.shop_info);
+
     }
 
     protected Station getNearestStation(Float[] loc){
@@ -340,6 +337,18 @@ public class MainActivity extends AppCompatActivity {
             TextView points = (TextView) findViewById(R.id.userpoints);
             points.setText(Integer.toString(user_points));
             setContentView(R.layout.rewards);
+            ImageButton shop = (ImageButton) findViewById(R.id.imageButton4);
+            shop.setOnClickListener(vshop->{
+                setContentView(R.layout.shop_info);
+                int pnts = User.getUserspoints(active_user.id);
+                TextView needed = (TextView) findViewById(R.id.textView6);
+                if(pnts < Integer.parseInt(needed.getText().toString())){
+                    active_user.reduceUsersPoitns(Integer.parseInt(needed.getText().toString()));
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(), "Not enough points!", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            });
             home.setOnClickListener(vhome -> {
                 setContentView(R.layout.home_google_map);
                 inHome();
@@ -349,18 +358,10 @@ public class MainActivity extends AppCompatActivity {
         toggleVehicleOptions(active_user);
 
 
-        //Button spend_points = (Button) findViewById(R.id.personal_points);
-        //spend_points.setOnClickListener(vspend -> {
-            //setContentView(R.layout.rewards);
-            //TODO: οθόνη πόντων UI
-            //TODO: από την οθόνη πόντων παει στο Εξαργυρωση πόντων στο κατάστημα
-        //});
-
         Button mystats = (Button) findViewById(R.id.statistika);
         mystats.setOnClickListener(vstats -> {
             float user_stats = active_user.score;
             setContentView(R.layout.statistics);
-            // TODO: οθόνη στατιστικών χρήστη - doing it Spyros
         });
 
     }

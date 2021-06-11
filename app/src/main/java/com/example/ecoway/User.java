@@ -21,6 +21,11 @@ public class User {
     int points;
     ArrayList <Invitations> invitationsList = new ArrayList<>();
 
+    public static int getUserspoints(int id) {
+        User skroutz = Register.getUserByID(id);
+        return skroutz.points;
+    }
+
     protected float getUserLongitude(User usr){
         return lng;
     }
@@ -128,5 +133,9 @@ public class User {
 
     public void setPayment(String[] payment_info) {
 
+    }
+
+    public void reduceUsersPoitns(int parseInt) {
+        this.points = this.points - parseInt;
     }
 }
