@@ -11,12 +11,12 @@ public class LogIn {
     String id;
     String password;
 
-    public static User signIn(User user){
+    public static boolean Login(User user){
         //Μεθοδος συνδεσης χρηστων.
         if  (auth(user) == true){
             user.loginFlag=true;
         }
-        return user;
+        return true;
     }
 
     public static void signUp(String username,String password,String email,String name) {
@@ -24,7 +24,6 @@ public class LogIn {
         String[] paymentCred = new String[100];
         User toSignUp = new User(username, password, email, name);
         Register.registerUser(toSignUp);
-
 
     }
 
@@ -52,8 +51,6 @@ public class LogIn {
     }
 
     public static boolean checkPaymentCredentials(String[] way, User user){
-        //Σωστα Creds
-       // return correctCredentials;
         user.payment_info=way;
         return true;
     }

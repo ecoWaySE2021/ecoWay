@@ -19,7 +19,12 @@ public class Station{
         String location;
         int id;
         String name;
-        public void setAll(int bikes, int rollers, int elec, String loc, int ID){
+
+    public static boolean showResults() {
+        return false;
+    }
+
+    public void setAll(int bikes, int rollers, int elec, String loc, int ID){
                 this.vehicle_amount[0]=bikes;
                 this.vehicle_amount[1]=rollers;
                 this.vehicle_amount[2]=elec;

@@ -2,14 +2,14 @@ package com.example.ecoway;
 enum payment {cash, credit_card, paypal, NULL};
 enum State {successful, failed, on_hold};
 
-public class Payment{
+public class Payments {
     static int ID=0;
     int ID_rent;
     double total;
     payment pway;
     State state;
 
-    public Payment(){
+    public Payments(){
         ID++;
         ID_rent=0;
         total=0;
@@ -17,7 +17,7 @@ public class Payment{
         state=State.on_hold;
     }
 
-    public Payment(int ID, int ID_rent, double total, payment pway, State state)
+    public Payments(int ID, int ID_rent, double total, payment pway, State state)
     {
         this.ID=ID;
         this.ID_rent=ID_rent;
