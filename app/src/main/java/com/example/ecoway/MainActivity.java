@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton dd_shops_button;
     private User active_user = new User();
     private ArrayList <Station> stations = new ArrayList<>();
+    private String[] payment;
 
 
     @Override
@@ -84,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
                     ImageButton payment_method = (ImageButton) findViewById(R.id.MASTERCRD);
                     ImageButton payment_method2 = (ImageButton) findViewById(R.id.PAYPAL);
                     payment_method.setOnClickListener(vmaster -> {
-                        String[] payment = {"Mastercard"};
+                       payment[0] = "Mastercard";
 
                     });
                     payment_method2.setOnClickListener(vpaypal -> {
-                        String[] payment = {"Paypal"};
+                        payment[0] = "Paypal";
                     });
                     if (LogIn.checkPaymentCredentials(payment, active_user) == true) {
                         //  addUserToDatabase();
