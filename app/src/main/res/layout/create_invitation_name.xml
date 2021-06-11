@@ -75,9 +75,9 @@
 
         <TextView
             android:id="@+id/textView119"
-            android:layout_width="212dp"
+            android:layout_width="334dp"
             android:layout_height="28dp"
-            android:text="Βρες έναν φίλο με βάση το..."
+            android:text="Πληκτρολόγησε το όνομα του φίλου σου"
             android:textColor="#000000"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -88,34 +88,19 @@
             app:layout_constraintVertical_bias="0.194" />
 
         <Button
-            android:id="@+id/OKmail"
-            android:layout_width="406dp"
-            android:layout_height="53dp"
-            android:text="ΟΝΟΜΑ ΧΡΗΣΤΗ"
+            android:id="@+id/OKname"
+            android:layout_width="59dp"
+            android:layout_height="45dp"
+            android:text="ΟΚ"
             android:textAlignment="viewStart"
             android:textColor="#000000"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintHorizontal_bias="0.954"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView119"
-            app:layout_constraintVertical_bias="0.08" />
-
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="410dp"
-            android:layout_height="59dp"
-            android:layout_marginBottom="308dp"
-            android:text="E-MAIL"
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textStyle="bold|italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/OKmail" />
+            app:layout_constraintVertical_bias="0.078" />
 
         <ImageView
             android:id="@+id/imageView35"
@@ -128,6 +113,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.069"
             app:srcCompat="@mipmap/appicon" />
+
+        <EditText
+            android:id="@+id/InputName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/OKname"
+            app:layout_constraintHorizontal_bias="0.251"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView119"
+            app:layout_constraintVertical_bias="0.078" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

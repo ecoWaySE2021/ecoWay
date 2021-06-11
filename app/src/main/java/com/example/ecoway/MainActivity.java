@@ -1,24 +1,17 @@
 package com.example.ecoway;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.google.android.gms.plus.model.people.Person;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.util.List;
 import java.util.ArrayList;
 
 
@@ -286,17 +279,26 @@ public class MainActivity extends AppCompatActivity {
         final String[] way = new String[1];
         makeInv.setOnClickListener(vmake -> {
             setContentView(R.layout.create_invitation);
-            Button byname = (Button) findViewById(R.id.button13);
+            Button byname = (Button) findViewById(R.id.OKmail);
             byname.setOnClickListener(vname->{
-                way[0] = "name";
+                EditText fname = (EditText) findViewById(R.id.InputName);
+                way[0] = fname.getEditableText().toString(); ;
+                Button ok = (Button) findViewById(R.id.OKname);
+                ok.setOnClickListener(vok->{
+                    User sasuke = User.getResult(way[0]);
+                    setContentView(R.layout.my_invitations);
+                });
             });
             Button bymail = (Button) findViewById(R.id.button14);
             bymail.setOnClickListener(vmail->{
-                way[0] = "mail";
+                EditText fname = (EditText) findViewById(R.id.inputEmail);
+                way[0] = fname.getEditableText().toString();
+                Button ok = (Button) findViewById(R.id.OKmail);
+                ok.setOnClickListener(vok->{
+                    User sasuke = User.getResult(way[0]);
+                    setContentView(R.layout.my_invitations);
+                });
             });
-            User sasuke = User.getResult(way[0]);
-            //TODO input name/email for invitations screen
-
         });
 
     }
