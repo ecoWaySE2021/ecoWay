@@ -263,17 +263,38 @@ public class MainActivity extends AppCompatActivity {
         Button mine = (Button) findViewById(R.id.mineInv);
         mine.setOnClickListener(vmine -> {
             ArrayList <Invitations> myInvs = Invitations.getMyInvs(active_user.id);
-            //TODO my invitations screen
+            setContentView(R.layout.my_invitations);
+            ImageButton directions = (ImageButton) findViewById(R.id.directions);
+            directions.setOnClickListener(vdir ->{
+                setContentView(R.layout.activity_station);
+                InStation(getNearestStation(active_user.getUserLocation(active_user.id)));
+            });
         });
 
         Button accepted = (Button) findViewById(R.id.accInv);
         accepted.setOnClickListener(vacc ->{
             ArrayList <Invitations> accInvs = Invitations.getAccInv(active_user.id);
-            //TODO accepted invitations screen
+            setContentView(R.layout.accepted_invitations);
+            ImageButton dir  =(ImageButton) findViewById(R.id.imageButton23);
+            dir.setOnClickListener(vdir ->{
+                setContentView(R.layout.activity_station);
+                InStation(getNearestStation(active_user.getUserLocation(active_user.id)));
+            });
         });
 
         Button makeInv = (Button) findViewById(R.id.makeInv);
+        final String[] way = new String[1];
         makeInv.setOnClickListener(vmake -> {
+            setContentView(R.layout.create_invitation);
+            Button byname = (Button) findViewById(R.id.button13);
+            byname.setOnClickListener(vname->{
+                way[0] = "name";
+            });
+            Button bymail = (Button) findViewById(R.id.button14);
+            bymail.setOnClickListener(vmail->{
+                way[0] = "mail";
+            });
+            User sasuke = User.getResult(way[0]);
             //TODO input name/email for invitations screen
 
         });

@@ -98,5 +98,13 @@ public class User {
         return loc;
     }
 
-
+    public static User getResult(String identifier){
+        User naruto = new User();
+        for(int i=0; i<Register.users.length; i++){
+            if(identifier.equals(Register.users[i].name)||identifier.equals(Register.users[i].email)){
+                naruto = Register.users[i];
+            }
+        }
+        return naruto;
+    }
 }
