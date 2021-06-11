@@ -19,21 +19,13 @@ public class LogIn {
         return user;
     }
 
-    public static void signUp(String username,String password,String email,String name){
+    public static void signUp(String username,String password,String email,String name) {
         //Μεθοδος εγγραφης χρηστων
         String[] paymentCred = new String[100];
         User toSignUp = new User(username, password, email, name);
         Register.registerUser(toSignUp);
 
-       //if (checkSignUpCredentials()==true){
-            //if (checkPaymentCredentials()==true){
-              //  addUserToDatabase();
-           // }else{
-                //λαθος payment
-           // }
-       // }else{
-            //λαθος creds
-       // }
+
     }
 
     public static boolean auth(User logged_user){
@@ -55,15 +47,14 @@ public class LogIn {
         return false;
     }
 
-    public boolean checkSignUpCredentials(){
-        //Σωστα Creds
-       // return correctCredentials;
+    public static boolean checkSignUpCredentials(User user){
         return true;
     }
 
-    public boolean checkPaymentCredentials(){
+    public static boolean checkPaymentCredentials(String[] way, User user){
         //Σωστα Creds
        // return correctCredentials;
+        user.payment_info=way;
         return true;
     }
 

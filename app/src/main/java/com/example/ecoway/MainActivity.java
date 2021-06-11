@@ -78,19 +78,43 @@ public class MainActivity extends AppCompatActivity {
                 String email = ((TextInputLayout) findViewById(R.id.email_input)).getEditText().toString();
                 String name = ((TextInputLayout) findViewById(R.id.name_input)).getEditText().toString();
                 LogIn.signUp(usrname, pass, email, name);
-                active_user.setAll(usrname, pass, email, name);
-                active_user = LogIn.signIn(active_user);
-                if(active_user.loginFlag){
-                    setContentView(R.layout.home_google_map);
-                    inHome();
+                if (LogIn.checkSignUpCredentials(active_user) == true) {
+
+                    setContentView(R.layout.payment_screen);
+                    ImageButton payment_method = (ImageButton) findViewById(R.id.MASTERCRD);
+                    ImageButton payment_method2 = (ImageButton) findViewById(R.id.PAYPAL);
+                    payment_method.setOnClickListener(vmaster -> {
+                        String[] payment = {"Mastercard"};
+
+                    });
+                    payment_method2.setOnClickListener(vpaypal -> {
+                        String[] payment = {"Paypal"};
+                    });
+                    if (LogIn.checkPaymentCredentials(payment, active_user) == true) {
+                        //  addUserToDatabase();
+                        // }else{
+                        //λαθος payment
+                        // }
+                        // }else{
+                        //λαθος creds
+                        // }
+                        active_user.setAll(usrname, pass, email, name);
+                        active_user = LogIn.signIn(active_user);
+                        if (active_user.loginFlag) {
+                            //PAYMENT
+                            cancel = (Button) findViewById(R.id.cancel_button2);
+                            cancel.setOnClickListener(v3 -> {
+                                setContentView(R.layout.vehicle_rental_customizer);
+                            });
+                            setContentView(R.layout.home_google_map);
+                            inHome();
+                        }
+                    }
+
                 }
+
             });
-            //setContentView(R.layout.payment_screen);
-            //PAYMENT
-            //cancel = (Button) findViewById(R.id.cancel_button2);
-            // cancel.setOnClickListener(v3 -> {
-            // setContentView(R.layout.vehicle_rental_customizer);
-            // });
+
         });
     }
 
