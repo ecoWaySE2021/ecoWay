@@ -5,14 +5,17 @@ import androidx.constraintlayout.utils.widget.ImageFilterButton;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
-
+import android.widget.CheckBox;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.widget.Switch;
 import java.util.ArrayList;
 
 
@@ -180,6 +183,10 @@ public class MainActivity extends AppCompatActivity {
                     });
                 });
                 //NOTIFICATIONS
+                toggleNotifications(active_user);
+
+                //VEHICLE OPTIONS
+                toggleVehicleOptions(active_user);
 
             });
 
@@ -203,6 +210,59 @@ public class MainActivity extends AppCompatActivity {
             });
 
         }
+
+    private void toggleVehicleOptions(User active_user) {
+        CheckBox bikes = (CheckBox) findViewById(R.id.podilatacheckBox);
+        CheckBox ebikes = (CheckBox) findViewById(R.id.HpodilatacheckBox);
+        CheckBox rollers = (CheckBox) findViewById(R.id.PatiniacheckBox);
+
+        bikes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    active_user.flagB=true;
+                }else{
+                    active_user.flagB=false;
+                }
+            }
+        });
+        ebikes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    active_user.flagEB=true;
+                }else{
+                    active_user.flagEB=false;
+                }
+            }
+        });
+        rollers.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    active_user.flagP=true;
+                }else{
+                    active_user.flagP=false;
+                }
+            }
+        });
+    }
+
+    private void toggleNotifications(User active_user) {
+        Switch notifications = (Switch) findViewById(R.id.notifications_switch);
+        notifications.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(notifications.isChecked()){
+                    active_user.flagN = true;
+                    notifications.setChecked(true);
+                }else{
+                    active_user.flagN = false;
+                    notifications.setChecked(false);
+                }
+            }
+        });
+    }
 
     private void settingsPayments(User active_user) {
         //TODO oi plhrwmes mou

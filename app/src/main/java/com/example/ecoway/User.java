@@ -11,7 +11,10 @@ public class User {
     String[] payment_info = new String[100];
     float lng,lat;
     boolean loginFlag;
-    boolean flagB=  true;
+    boolean flagN=  true;
+    boolean flagB = true;
+    boolean flagEB = true;
+    boolean flagP = true;
     float score; //ποσοστο οικολογικης μετακινησης
     Routes[] routeList = new Routes[100];
     static int route_idx = 0;
