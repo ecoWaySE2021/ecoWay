@@ -251,6 +251,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout13"
             android:layout_width="360dp"
             android:layout_height="155dp"
             android:layout_marginBottom="152dp"
@@ -426,7 +427,20 @@
                 app:layout_constraintStart_toStartOf="@+id/textView127"
                 app:layout_constraintTop_toBottomOf="@+id/button19"
                 app:layout_constraintVertical_bias="0.545" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider12"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout12" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
