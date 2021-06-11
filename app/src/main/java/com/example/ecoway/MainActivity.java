@@ -168,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
 
             ImageButton dd_settings = (ImageButton) findViewById(R.id.settingsdropdown);
             dd_settings.setOnClickListener(vset->{
-                // TODO settings screen
                 setContentView(R.layout.user_settings);
                 //EDIT INFO
                 Button edit_my_info = (Button) findViewById(R.id.edit_user_info);
@@ -346,6 +345,9 @@ public class MainActivity extends AppCompatActivity {
                 inHome();
             });
         });
+        toggleNotifications(active_user);
+        toggleVehicleOptions(active_user);
+
 
         //Button spend_points = (Button) findViewById(R.id.personal_points);
         //spend_points.setOnClickListener(vspend -> {
