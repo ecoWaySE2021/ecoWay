@@ -130,7 +130,7 @@
         app:layout_constraintVertical_bias="0.001"
         app:srcCompat="@drawable/ecoway" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView17"
         android:layout_width="28dp"
         android:layout_height="wrap_content"

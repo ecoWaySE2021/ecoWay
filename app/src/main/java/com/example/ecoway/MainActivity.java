@@ -3,6 +3,7 @@ package com.example.ecoway;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.utils.widget.ImageFilterButton;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.home_google_map);
                 inHome();
             }
+            inHome();
         });
         //GUEST LOGIN
         guest_login_butt = (Button) findViewById(R.id.login_guest);
@@ -195,28 +197,28 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.support);
                 Button faq = (Button) findViewById(R.id.FAQ);
                 faq.setOnClickListener(vfaq ->{
-                    //TODO FAQ screen
-                    //setContentView(R.layout.faq);
-                });
+                    setContentView(R.layout.faq);
+        });
                 Button chat = (Button) findViewById(R.id.LIVECHAT);
                 chat.setOnClickListener(vchat->{
-                    //TODO Livechat screen
                     User guru = new User();
                     guru.usrname = "Guru";
-                    //setContentView(R.layout.livechat);
-                    //TODO livechat merthod with user guru
-                    //livechat(guru);
-                });
-            });
+                    setContentView(R.layout.live_chat);
+                   live_chat(guru);
+               });
+           });
 
         }
+
+    private void live_chat(User guru) {
+    }
 
     private void toggleVehicleOptions(User active_user) {
         CheckBox bikes = (CheckBox) findViewById(R.id.podilatacheckBox);
         CheckBox ebikes = (CheckBox) findViewById(R.id.HpodilatacheckBox);
         CheckBox rollers = (CheckBox) findViewById(R.id.PatiniacheckBox);
 
-        bikes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+       bikes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
@@ -228,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         });
         ebikes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     active_user.flagEB=true;
                 }else{
@@ -238,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
         });
         rollers.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+           public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     active_user.flagP=true;
                 }else{
@@ -297,6 +299,8 @@ public class MainActivity extends AppCompatActivity {
             if(!(editemail.toString().equals(""))){
                 active_user.setEmail(editemail.toString());
             }
+            setContentView(R.layout.home_google_map);
+            inHome();
     });
 
     }
@@ -319,7 +323,6 @@ public class MainActivity extends AppCompatActivity {
         });
         TextView usrname = (TextView) findViewById(R.id.username);
         usrname.setText(String.valueOf(active_user.usrname));
-        // TODO Στο register δεν γινεται σωστα display το username
         User user_data = active_user.getUserData();
         for(int count = 0; count<3; count+=1){
             Routes myroute = new Routes( );
@@ -329,6 +332,11 @@ public class MainActivity extends AppCompatActivity {
         myroutes.setOnClickListener(vroutes->{
             setContentView(R.layout.suggested_routes);
             Routes RouteDetails = active_user.getRouteDetails((int)(Math.random() * (100)));
+            ImageButton drp = (ImageButton) findViewById(R.id.menuBar2);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
         });
 
         Button mypoints = (Button) findViewById(R.id.pontoi);
@@ -337,9 +345,15 @@ public class MainActivity extends AppCompatActivity {
             TextView points = (TextView) findViewById(R.id.userpoints);
             points.setText(Integer.toString(user_points));
             setContentView(R.layout.rewards);
+            ImageButton drp = (ImageButton) findViewById(R.id.imageButton);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
             ImageButton shop = (ImageButton) findViewById(R.id.imageButton4);
             shop.setOnClickListener(vshop->{
                 setContentView(R.layout.shop_info);
+
                 int pnts = User.getUserspoints(active_user.id);
                 TextView needed = (TextView) findViewById(R.id.textView6);
                 if(pnts < Integer.parseInt(needed.getText().toString())){
@@ -348,6 +362,19 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), "Not enough points!", Toast.LENGTH_SHORT);
                     toast.show();
                 }
+                ImageButton dr = (ImageButton) findViewById(R.id.imageButton);
+                dr.setOnClickListener(vd->{
+                    setContentView(R.layout.home_google_map);
+                    inHome();
+                });
+            });
+            Button stoix = (Button) findViewById(R.id.stoixeiaButton);
+            stoix.setOnClickListener(vs->{
+                EditUserInfo(active_user);
+            });
+            Button plhr = (Button) findViewById(R.id.OiPlirwmesMou) ;
+            plhr.setOnClickListener(vp->{
+                settingsPayments(active_user);
             });
             home.setOnClickListener(vhome -> {
                 setContentView(R.layout.home_google_map);
@@ -362,6 +389,11 @@ public class MainActivity extends AppCompatActivity {
         mystats.setOnClickListener(vstats -> {
             float user_stats = active_user.score;
             setContentView(R.layout.statistics);
+            ImageButton drp = (ImageButton) findViewById(R.id.menuBar2);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
         });
 
     }
@@ -371,6 +403,11 @@ public class MainActivity extends AppCompatActivity {
         active.setOnClickListener(vactive -> {
             ArrayList <Invitations> activeInvs =  Invitations.getActiveInv(active_user.id);
             setContentView(R.layout.active_invitations);
+            ImageButton drp = (ImageButton) findViewById(R.id.imageButton16);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
             Button accept = (Button) findViewById(R.id.accept);
             accept.setOnClickListener(vaccept ->{
                 String email =  ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
@@ -395,6 +432,11 @@ public class MainActivity extends AppCompatActivity {
         mine.setOnClickListener(vmine -> {
             ArrayList <Invitations> myInvs = Invitations.getMyInvs(active_user.id);
             setContentView(R.layout.my_invitations);
+            ImageButton drp = (ImageButton) findViewById(R.id.imageButton22);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
             ImageButton directions = (ImageButton) findViewById(R.id.directions);
             directions.setOnClickListener(vdir ->{
                 setContentView(R.layout.activity_station);
@@ -406,6 +448,11 @@ public class MainActivity extends AppCompatActivity {
         accepted.setOnClickListener(vacc ->{
             ArrayList <Invitations> accInvs = Invitations.getAccInv(active_user.id);
             setContentView(R.layout.accepted_invitations);
+            ImageButton drp = (ImageButton) findViewById(R.id.imageButton17);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
             ImageButton dir  =(ImageButton) findViewById(R.id.imageButton23);
             dir.setOnClickListener(vdir ->{
                 setContentView(R.layout.activity_station);
@@ -417,6 +464,11 @@ public class MainActivity extends AppCompatActivity {
         final String[] way = new String[1];
         makeInv.setOnClickListener(vmake -> {
             setContentView(R.layout.create_invitation);
+            ImageButton drp = (ImageButton) findViewById(R.id.imageView32);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
             Button byname = (Button) findViewById(R.id.OKmail);
             byname.setOnClickListener(vname->{
                 EditText fname = (EditText) findViewById(R.id.InputName);
@@ -447,6 +499,11 @@ public class MainActivity extends AppCompatActivity {
         vehicle_button = (Button) findViewById(R.id.vehicle_button);
         vehicle_button.setOnClickListener((vhb -> {
             setContentView(R.layout.vehicle_selection);
+            ImageButton drp = (ImageButton) findViewById(R.id.imageView17);
+            drp.setOnClickListener(vd->{
+                setContentView(R.layout.home_google_map);
+                inHome();
+            });
             vehicle = (ImageButton) findViewById(R.id.imageButton13);
             vehicle.setOnClickListener(v6 -> {
                 setContentView(R.layout.vehicle_rental_customizer);
@@ -458,6 +515,11 @@ public class MainActivity extends AppCompatActivity {
                     cancel = (Button) findViewById(R.id.cancel_button3);
                     cancel.setOnClickListener(v4 -> {
                         setContentView(R.layout.vehicle_selection);
+                        ImageButton dr = (ImageButton) findViewById(R.id.menuBar2);
+                        dr.setOnClickListener(vd->{
+                            setContentView(R.layout.home_google_map);
+                            inHome();
+                        });
                     });
                 });
             });
