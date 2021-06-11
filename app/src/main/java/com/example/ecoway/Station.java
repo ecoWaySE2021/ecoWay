@@ -1,6 +1,10 @@
 package com.example.ecoway;
 
 public class Station{
+
+        public  Station(){
+
+        }
         public Station(int bikes, int rollers, int elecs, String loc, int ID){
                 int[] vehicle_amount = {bikes, rollers, elecs};
                 //String[] vehicle_List = {"Ποδήλατα", "Πατίνια", "Ηλεκτρικά Ποδήλατα"};
@@ -14,6 +18,7 @@ public class Station{
         String[] vehicle_List;
         String location;
         int id;
+        String name;
         public void setAll(int bikes, int rollers, int elec, String loc, int ID){
                 this.vehicle_amount[0]=bikes;
                 this.vehicle_amount[1]=rollers;
@@ -39,5 +44,11 @@ public class Station{
                 }else if (type.equals(this.vehicle_List[2])){
                         this.vehicle_amount[2] -= this.vehicle_amount[2];
                 }
+        }
+
+        public static Station getStationByName(String name){
+                Station station = new Station();
+                station.name = "Τριών Ναυάρχων";
+                return station;
         }
 }

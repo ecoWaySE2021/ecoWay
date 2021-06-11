@@ -1,6 +1,7 @@
 package com.example.ecoway;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.utils.widget.ImageFilterButton;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -139,8 +140,18 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     InStation(getNearestStation(location));
                 }
-
             }));
+
+            Button dd_stations_byname = (Button) findViewById(R.id.stationByName);
+            dd_stations_byname.setOnClickListener(vsname->{
+                //TODO station by name screen
+                setContentView(R.layout.station_by_name);
+                EditText station_name = (EditText) findViewById(R.id.station_by_name);
+                Button search = (Button) findViewById(R.id.button8);
+                search.setOnClickListener(vsearch->{
+                    InStation(Station.getStationByName(station_name.toString()));
+                });
+            });
 
             dd_shops_button = (ImageButton) findViewById(R.id.shopsbuttondropdown);
             dd_shops_button.setOnClickListener(vshops->{
